@@ -3,172 +3,618 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Ariba Shakeel - PhD Researcher in Applied Mathematics at the University of Birmingham. Research in mathematical biology, mathematical modelling, asymptotic analysis and physiological systems.">
 
     <title>Ariba Shakeel | Applied Mathematics</title>
 
     <style>
+
+        /* =========================
+           GENERAL PAGE
+        ========================== */
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
-            font-family: Arial, sans-serif;
-            max-width: 900px;
-            margin: auto;
-            padding: 40px 25px;
-            line-height: 1.6;
+            margin: 0;
+            font-family:
+                -apple-system,
+                BlinkMacSystemFont,
+                "Segoe UI",
+                Roboto,
+                Arial,
+                sans-serif;
+
             color: #222;
+            background: #ffffff;
+            line-height: 1.7;
         }
 
-        header {
-            border-bottom: 1px solid #ddd;
-            margin-bottom: 35px;
-            padding-bottom: 20px;
+        .container {
+            max-width: 1050px;
+            margin: auto;
+            padding: 0 30px;
         }
 
-        h1 {
-            font-size: 40px;
+
+        /* =========================
+           NAVIGATION
+        ========================== */
+
+        nav {
+            border-bottom: 1px solid #e5e5e5;
+            background: white;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-container {
+            max-width: 1050px;
+            margin: auto;
+            padding: 17px 30px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-name {
+            font-weight: 700;
+            font-size: 19px;
+            color: #1d3557;
+        }
+
+        .nav-links a {
+            color: #333;
+            text-decoration: none;
+            margin-left: 24px;
+            font-size: 15px;
+        }
+
+        .nav-links a:hover {
+            color: #1d5f8a;
+        }
+
+
+        /* =========================
+           HERO / INTRODUCTION
+        ========================== */
+
+        .hero {
+            padding: 90px 0 70px 0;
+        }
+
+        .hero h1 {
+            font-size: 52px;
+            margin: 0 0 8px 0;
+            line-height: 1.15;
+            color: #172536;
+        }
+
+        .hero .position {
+            font-size: 22px;
+            color: #485769;
             margin-bottom: 5px;
         }
 
-        .subtitle {
-            font-size: 19px;
-            color: #555;
+        .hero .university {
+            font-size: 18px;
+            color: #66717f;
+            margin-bottom: 30px;
         }
 
-        nav {
-            margin-top: 20px;
+        .hero-description {
+            max-width: 760px;
+            font-size: 18px;
+            color: #3c4652;
         }
 
-        nav a {
-            margin-right: 20px;
+        .academic-links {
+            margin-top: 28px;
+        }
+
+        .academic-links a {
+            display: inline-block;
+            margin-right: 18px;
+            margin-bottom: 10px;
+            color: #1d5f8a;
             text-decoration: none;
-            color: #0056b3;
+            font-weight: 500;
         }
 
-        nav a:hover {
+        .academic-links a:hover {
             text-decoration: underline;
         }
 
+
+        /* =========================
+           SECTIONS
+        ========================== */
+
         section {
-            margin-bottom: 40px;
+            padding: 45px 0;
+        }
+
+        section + section {
+            border-top: 1px solid #eeeeee;
         }
 
         h2 {
-            border-bottom: 1px solid #ddd;
-            padding-bottom: 6px;
+            font-size: 29px;
+            color: #172536;
+            margin-top: 0;
+            margin-bottom: 25px;
         }
+
+        h3 {
+            color: #25364a;
+            margin-bottom: 7px;
+        }
+
+        p {
+            margin-top: 0;
+        }
+
+
+        /* =========================
+           RESEARCH INTERESTS
+        ========================== */
+
+        .research-grid {
+            display: grid;
+            grid-template-columns:
+                repeat(auto-fit, minmax(220px, 1fr));
+            gap: 16px;
+            margin-top: 25px;
+        }
+
+        .research-item {
+            background: #f7f8fa;
+            border: 1px solid #e6e9ed;
+            padding: 18px;
+            border-radius: 7px;
+        }
+
+        .research-item strong {
+            color: #263c56;
+        }
+
+
+        /* =========================
+           PUBLICATIONS / TALKS
+        ========================== */
+
+        .entry {
+            margin-bottom: 25px;
+        }
+
+        .entry-title {
+            font-weight: 600;
+            color: #25364a;
+        }
+
+        .entry-details {
+            color: #66717f;
+            font-size: 15px;
+        }
+
+
+        /* =========================
+           CONTACT
+        ========================== */
+
+        .contact-box {
+            background: #f7f8fa;
+            padding: 25px;
+            border-radius: 7px;
+            border: 1px solid #e6e9ed;
+        }
+
+        a {
+            color: #1d5f8a;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================== */
 
         footer {
-            margin-top: 50px;
-            border-top: 1px solid #ddd;
-            padding-top: 20px;
-            color: #666;
+            margin-top: 30px;
+            padding: 30px 0;
+            border-top: 1px solid #e5e5e5;
+            color: #777;
             font-size: 14px;
         }
-    </style>
 
+
+        /* =========================
+           MOBILE
+        ========================== */
+
+        @media (max-width: 750px) {
+
+            .hero {
+                padding-top: 60px;
+            }
+
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            .nav-container {
+                display: block;
+            }
+
+            .nav-links {
+                margin-top: 10px;
+            }
+
+            .nav-links a {
+                margin-left: 0;
+                margin-right: 15px;
+                display: inline-block;
+                margin-top: 7px;
+            }
+
+        }
+
+    </style>
 </head>
+
 
 <body>
 
-<header>
+
+<!-- =========================
+     NAVIGATION
+========================== -->
+
+<nav>
+
+    <div class="nav-container">
+
+        <div class="nav-name">
+            Ariba Shakeel
+        </div>
+
+        <div class="nav-links">
+
+            <a href="#about">About</a>
+
+            <a href="#research">Research</a>
+
+            <a href="#publications">Publications</a>
+
+            <a href="#teaching">Teaching</a>
+
+            <a href="#talks">Talks</a>
+
+            <a href="#contact">Contact</a>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+
+<main class="container">
+
+
+<!-- =========================
+     INTRODUCTION
+========================== -->
+
+<section class="hero">
 
     <h1>Ariba Shakeel</h1>
 
-    <div class="subtitle">
-        PhD Researcher in Applied Mathematics<br>
-        University of Birmingham
+    <div class="position">
+        PhD Researcher in Applied Mathematics
     </div>
 
-    <nav>
-        <a href="#about">About</a>
-        <a href="#research">Research</a>
-        <a href="#publications">Publications</a>
-        <a href="#teaching">Teaching</a>
-        <a href="#talks">Talks</a>
-        <a href="#contact">Contact</a>
-    </nav>
+    <div class="university">
+        University of Birmingham, United Kingdom
+    </div>
 
-</header>
+    <p class="hero-description">
 
+        I am a PhD researcher in Applied Mathematics
+        interested in the development and analysis of
+        mathematical models for physiological and
+        biomedical systems.
+
+        My current research focuses on mathematical
+        modelling of cortisol dynamics and
+        hydrocortisone replacement therapy, combining
+        mechanistic modelling, asymptotic analysis and
+        parameter estimation.
+
+    </p>
+
+
+    <div class="academic-links">
+
+        <!-- We will replace # with your real links later -->
+
+        <a href="#">Google Scholar</a>
+
+        <a href="#">ResearchGate</a>
+
+        <a href="#">ORCID</a>
+
+        <a href="#">LinkedIn</a>
+
+        <a href="#">CV</a>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     ABOUT
+========================== -->
 
 <section id="about">
 
     <h2>About</h2>
 
     <p>
-        I am a PhD researcher in Applied Mathematics at the University of Birmingham.
-        My research focuses on mathematical modelling of physiological systems,
-        with particular interest in cortisol dynamics and hydrocortisone replacement
-        therapy.
+
+        I am currently undertaking doctoral research
+        in Applied Mathematics at the University of
+        Birmingham.
+
+        My research lies at the interface of
+        mathematics, biology and medicine, with an
+        emphasis on understanding physiological
+        processes through mathematical models.
+
+    </p>
+
+    <p>
+
+        I am particularly interested in how mathematical
+        analysis and computational methods can be used
+        to understand treatment strategies and the
+        underlying mechanisms governing biological
+        systems.
+
     </p>
 
 </section>
 
+
+
+<!-- =========================
+     RESEARCH
+========================== -->
 
 <section id="research">
 
-    <h2>Research Interests</h2>
+    <h2>Research</h2>
 
     <p>
-        My research interests include mathematical biology, mechanistic modelling,
-        asymptotic analysis, parameter estimation, identifiability, pharmacokinetic
-        modelling, and mathematical approaches to physiological systems.
+
+        My research develops mechanistic mathematical
+        models of cortisol dynamics, including hormone
+        transport, protein binding and hydrocortisone
+        administration.
+
+        I use analytical and computational approaches
+        to investigate model behaviour and its
+        physiological interpretation.
+
     </p>
+
+
+    <div class="research-grid">
+
+        <div class="research-item">
+            <strong>Mathematical Biology</strong>
+        </div>
+
+        <div class="research-item">
+            <strong>Mathematical Modelling</strong>
+        </div>
+
+        <div class="research-item">
+            <strong>Asymptotic Analysis</strong>
+        </div>
+
+        <div class="research-item">
+            <strong>Parameter Estimation</strong>
+        </div>
+
+        <div class="research-item">
+            <strong>Identifiability</strong>
+        </div>
+
+        <div class="research-item">
+            <strong>Pharmacokinetic Modelling</strong>
+        </div>
+
+    </div>
 
 </section>
 
+
+
+<!-- =========================
+     PUBLICATIONS
+========================== -->
 
 <section id="publications">
 
-    <h2>Publications</h2>
+    <h2>Publications & Research Outputs</h2>
 
     <p>
-        Publications and research outputs will be listed here.
+
+        Publications and research outputs will be
+        added here.
+
     </p>
+
+    <!-- Example for later:
+
+    <div class="entry">
+
+        <div class="entry-title">
+            Title of Paper
+        </div>
+
+        <div>
+            Author 1, <strong>Ariba Shakeel</strong>,
+            Author 3
+        </div>
+
+        <div class="entry-details">
+            Journal Name, Year
+        </div>
+
+    </div>
+
+    -->
 
 </section>
 
+
+
+<!-- =========================
+     TEACHING
+========================== -->
 
 <section id="teaching">
 
     <h2>Teaching</h2>
 
     <p>
-        Information about teaching experience and academic teaching activities
-        will be added here.
+
+        Alongside my doctoral research, I am involved
+        in undergraduate mathematics teaching at the
+        University of Birmingham.
+
+    </p>
+
+    <p>
+
+        Further information about modules, teaching
+        activities and academic support will be added
+        here.
+
     </p>
 
 </section>
 
+
+
+<!-- =========================
+     TALKS
+========================== -->
 
 <section id="talks">
 
-    <h2>Talks & Conferences</h2>
+    <h2>Selected Talks & Conferences</h2>
 
     <p>
-        Selected conference presentations, seminars, and academic talks will
-        be listed here.
+
+        Selected conference presentations, seminars
+        and research talks will be listed here.
+
     </p>
 
 </section>
 
+
+
+<!-- =========================
+     SERVICE
+========================== -->
+
+<section id="service">
+
+    <h2>Academic Service & Outreach</h2>
+
+    <p>
+
+        I contribute to academic events, research
+        activities and student engagement within the
+        wider university community.
+
+    </p>
+
+</section>
+
+
+
+<!-- =========================
+     CONTACT
+========================== -->
 
 <section id="contact">
 
     <h2>Contact</h2>
 
-    <p>
-        University of Birmingham<br>
+    <div class="contact-box">
+
+        <strong>Ariba Shakeel</strong>
+
+        <br>
+
+        School of Mathematics
+
+        <br>
+
+        University of Birmingham
+
+        <br>
+
         Birmingham, United Kingdom
-    </p>
+
+        <br><br>
+
+        Academic profile links and email will be added
+        here.
+
+    </div>
 
 </section>
 
 
+</main>
+
+
+
+<!-- =========================
+     FOOTER
+========================== -->
+
 <footer>
 
-    © Ariba Shakeel
+    <div class="container">
+
+        © 2026 Ariba Shakeel
+
+    </div>
 
 </footer>
+
 
 </body>
 
