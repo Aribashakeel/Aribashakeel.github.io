@@ -1,0 +1,751 @@
+/* =====================================================
+   ARIBA SHAKEEL — ACADEMIC WEBSITE
+   ===================================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: #172033;
+    background: #ffffff;
+    line-height: 1.7;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    width: min(1180px, 92%);
+    margin: auto;
+}
+
+/* =====================================================
+   NAVIGATION
+   ===================================================== */
+
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 50;
+    border-bottom: 1px solid rgba(255,255,255,0.12);
+    background: rgba(3, 18, 47, 0.45);
+    backdrop-filter: blur(8px);
+}
+
+.nav-inner {
+    width: min(1400px, 94%);
+    margin: auto;
+    min-height: 74px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.brand {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 28px;
+    font-weight: 600;
+    color: white;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 29px;
+}
+
+.nav-links a {
+    color: rgba(255,255,255,0.92);
+    font-size: 15px;
+    font-weight: 500;
+    transition: 0.25s;
+}
+
+.nav-links a:hover {
+    color: #f4b942;
+}
+
+/* =====================================================
+   HERO
+   ===================================================== */
+
+.hero {
+    min-height: 720px;
+    position: relative;
+    overflow: hidden;
+    color: white;
+
+    background:
+        radial-gradient(circle at 26% 38%,
+            rgba(72,92,200,.35),
+            transparent 24%),
+
+        radial-gradient(circle at 72% 42%,
+            rgba(0,175,220,.18),
+            transparent 28%),
+
+        radial-gradient(circle at 83% 15%,
+            rgba(87,67,220,.18),
+            transparent 22%),
+
+        linear-gradient(
+            120deg,
+            #020c25 0%,
+            #071b47 47%,
+            #031833 100%
+        );
+}
+
+/* subtle mathematical grid */
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background-image:
+        linear-gradient(
+            rgba(255,255,255,.025) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,.025) 1px,
+            transparent 1px
+        );
+
+    background-size: 55px 55px;
+}
+
+/* blue glow */
+
+.hero::after {
+    content: "";
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+
+    left: 9%;
+    top: 13%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(55,106,255,.22),
+            transparent 62%
+        );
+
+    filter: blur(10px);
+}
+
+/* =====================================================
+   HERO LAYOUT
+   ===================================================== */
+
+.hero-content {
+    width: min(1400px, 94%);
+    margin: auto;
+
+    min-height: 720px;
+
+    display: grid;
+
+    grid-template-columns:
+        0.95fr
+        1.25fr
+        1.05fr;
+
+    align-items: center;
+
+    gap: 35px;
+
+    padding-top: 90px;
+
+    position: relative;
+    z-index: 5;
+}
+
+/* =====================================================
+   LEFT MATH PANEL
+   ===================================================== */
+
+.math-panel {
+    color: rgba(255,255,255,.78);
+    font-family: Georgia, serif;
+}
+
+.equation {
+    font-size: 25px;
+    line-height: 1.65;
+    margin-bottom: 15px;
+}
+
+.epsilon {
+    font-size: 25px;
+    margin: 20px 0 5px;
+}
+
+.multiscale-label {
+    font-family: "Segoe UI", sans-serif;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    color: #cbd7ef;
+    margin-bottom: 4px;
+}
+
+.times {
+    font-size: 21px;
+    margin-bottom: 20px;
+}
+
+.plot-box {
+    margin-top: 15px;
+}
+
+.plot-box svg {
+    width: 100%;
+    max-width: 340px;
+}
+
+/* =====================================================
+   MAIN HERO TEXT
+   ===================================================== */
+
+.hero-main {
+    position: relative;
+}
+
+.eyebrow {
+    color: #f7bd38;
+    font-weight: 700;
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+
+.hero-main h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(52px, 6vw, 82px);
+    margin: 0;
+    line-height: 1.04;
+    letter-spacing: -1px;
+}
+
+.gold-line {
+    width: 58px;
+    height: 3px;
+    background: #e9aa26;
+    margin: 22px 0;
+}
+
+.hero-description {
+    max-width: 570px;
+    color: #e4eaf6;
+    font-size: 18px;
+    line-height: 1.65;
+}
+
+.profile-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    margin-top: 26px;
+}
+
+.profile-links a {
+    color: white;
+    font-size: 14px;
+    opacity: .92;
+}
+
+.profile-links a:hover {
+    color: #f7bd38;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 13px;
+    margin-top: 30px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 22px;
+    border-radius: 6px;
+    border: 1px solid rgba(255,255,255,.45);
+    color: white;
+    font-weight: 600;
+    transition: .25s;
+}
+
+.btn-primary {
+    background: linear-gradient(
+        135deg,
+        #d99a1f,
+        #f0b93a
+    );
+
+    border: none;
+    color: white;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    background: rgba(255,255,255,.12);
+}
+
+.btn-primary:hover {
+    background: #e5a82c;
+}
+
+/* =====================================================
+   RIGHT SCIENTIFIC PANEL
+   ===================================================== */
+
+.science-panel {
+    position: relative;
+}
+
+.compartment-title {
+    text-align: center;
+    color: #a9dff8;
+    font-size: 14px;
+    margin-bottom: 16px;
+}
+
+.compartment-grid {
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        1.1fr
+        1fr;
+
+    grid-template-rows:
+        auto auto auto;
+
+    gap: 11px;
+
+    align-items: center;
+}
+
+.compartment {
+    padding: 13px 8px;
+
+    border:
+        1px solid rgba(56,204,255,.85);
+
+    border-radius: 12px;
+
+    text-align: center;
+
+    color: #c9edff;
+
+    background:
+        rgba(6,34,78,.65);
+
+    box-shadow:
+        0 0 25px rgba(0,145,255,.08);
+
+    font-size: 14px;
+}
+
+.protein {
+    grid-column: 2;
+}
+
+.free {
+    grid-column: 2;
+    grid-row: 2;
+
+    border-width: 2px;
+
+    font-size: 16px;
+}
+
+.albumin {
+    grid-column: 3;
+    grid-row: 2;
+}
+
+.peripheral {
+    grid-column: 2;
+    grid-row: 3;
+}
+
+.arrow-text {
+    text-align: center;
+    color: #56d4ff;
+    font-size: 24px;
+    line-height: 1;
+}
+
+.timescale {
+    margin-top: 45px;
+}
+
+.scale-line {
+    height: 4px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #9b5de5,
+            #00b4d8,
+            #78d64b
+        );
+
+    border-radius: 10px;
+}
+
+.scale-labels {
+    display: flex;
+    justify-content: space-between;
+
+    margin-top: 10px;
+
+    color: #d2e4fa;
+}
+
+.scale-orders {
+    display: flex;
+    justify-content: space-between;
+
+    color: #9eb7d6;
+
+    font-family: Georgia, serif;
+    margin-top: 4px;
+}
+
+/* =====================================================
+   MAIN WHITE CONTENT
+   ===================================================== */
+
+.section {
+    padding: 85px 0;
+}
+
+.section-soft {
+    background: #f8fafc;
+}
+
+.section-title {
+    color: #0b356e;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 17px;
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+
+.section-title::after {
+    content: "";
+    display: block;
+    width: 48px;
+    height: 3px;
+    background: #e3a525;
+    margin-top: 10px;
+}
+
+.section h2 {
+    font-family: Georgia, serif;
+    font-size: 36px;
+    color: #10243f;
+    margin: 8px 0 25px;
+}
+
+/* =====================================================
+   ABOUT
+   ===================================================== */
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+    align-items: center;
+}
+
+.about-text {
+    font-size: 17px;
+}
+
+.about-highlight {
+    color: #0d448b;
+    font-weight: 700;
+}
+
+.about-visual {
+    min-height: 330px;
+    border-radius: 18px;
+    overflow: hidden;
+    position: relative;
+
+    background:
+        radial-gradient(
+            circle at 30% 25%,
+            rgba(101,142,255,.26),
+            transparent 25%
+        ),
+        linear-gradient(
+            135deg,
+            #071c46,
+            #0a4d72
+        );
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-visual-content {
+    text-align: center;
+    color: white;
+    padding: 35px;
+}
+
+.about-visual-content .symbol {
+    font-family: Georgia, serif;
+    font-size: 68px;
+    color: #b6dbff;
+}
+
+.about-visual-content p {
+    color: #dbeaff;
+}
+
+/* =====================================================
+   RESEARCH CARDS
+   ===================================================== */
+
+.cards {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 24px;
+
+    margin-top: 35px;
+}
+
+.card {
+    padding: 35px 28px;
+    border-radius: 14px;
+    border: 1px solid #e4e9f0;
+    background: white;
+
+    box-shadow:
+        0 10px 35px rgba(21,46,79,.06);
+
+    transition: .25s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow:
+        0 16px 40px rgba(21,46,79,.11);
+}
+
+.card-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #eaf1ff;
+    color: #123c7d;
+
+    font-family: Georgia, serif;
+
+    font-size: 27px;
+
+    margin-bottom: 20px;
+}
+
+.card h3 {
+    color: #11294c;
+    margin-bottom: 12px;
+}
+
+.card p {
+    color: #586579;
+    font-size: 15px;
+}
+
+/* =====================================================
+   FACT BAR
+   ===================================================== */
+
+.facts {
+    margin-top: 55px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    border:
+        1px solid #e3e8ef;
+
+    border-radius: 14px;
+
+    overflow: hidden;
+
+    background: white;
+}
+
+.fact {
+    padding: 24px;
+
+    border-right:
+        1px solid #e7ebf1;
+}
+
+.fact:last-child {
+    border-right: none;
+}
+
+.fact strong {
+    display: block;
+    color: #123f7a;
+    margin-bottom: 5px;
+}
+
+.fact span {
+    color: #586579;
+    font-size: 14px;
+}
+
+/* =====================================================
+   PUBLICATIONS / TALKS
+   ===================================================== */
+
+.entry {
+    padding: 23px 0;
+    border-bottom: 1px solid #e7ebef;
+}
+
+.entry-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #143e72;
+}
+
+.entry-meta {
+    color: #677589;
+    margin-top: 6px;
+}
+
+/* =====================================================
+   CONTACT + FOOTER
+   ===================================================== */
+
+.contact-box {
+    border-radius: 15px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #071b47,
+            #0a4165
+        );
+
+    color: white;
+
+    padding: 42px;
+}
+
+.contact-box h2 {
+    color: white;
+}
+
+.contact-box a {
+    color: #ffd26c;
+}
+
+footer {
+    padding: 28px 0;
+    background: #03132d;
+    color: #aebbd0;
+    text-align: center;
+    font-size: 14px;
+}
+
+/* =====================================================
+   RESPONSIVE
+   ===================================================== */
+
+@media (max-width: 1050px) {
+
+    .hero-content {
+        grid-template-columns: 1fr 1.3fr;
+    }
+
+    .science-panel {
+        display: none;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .facts {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+@media (max-width: 760px) {
+
+    .nav-links {
+        display: none;
+    }
+
+    .hero-content {
+        grid-template-columns: 1fr;
+        padding-top: 125px;
+        padding-bottom: 60px;
+    }
+
+    .math-panel {
+        display: none;
+    }
+
+    .hero {
+        min-height: auto;
+    }
+
+    .hero-main h1 {
+        font-size: 52px;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .facts {
+        grid-template-columns: 1fr;
+    }
+
+    .fact {
+        border-right: none;
+        border-bottom:
+            1px solid #e7ebf1;
+    }
+
+}
