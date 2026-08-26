@@ -9,7 +9,7 @@
           content="width=device-width, initial-scale=1.0">
 
     <meta name="description"
-          content="Ariba Shakeel is a PhD Researcher in Applied Mathematics at the University of Birmingham, working in mathematical biology, mathematical modelling, asymptotic analysis and computational methods.">
+          content="Ariba Shakeel is a PhD Researcher in Applied Mathematics at the University of Birmingham.">
 
     <meta name="author"
           content="Ariba Shakeel">
@@ -18,25 +18,23 @@
         Ariba Shakeel | Applied Mathematics
     </title>
 
-    <!-- Font Awesome icons -->
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-    <!-- Main stylesheet -->
     <link rel="stylesheet"
           href="style.css">
 
 </head>
 
 
-<body class="home-page">
+<body class="homepage">
 
 
-<!-- =========================================================
+<!-- =====================================================
      NAVIGATION
-========================================================= -->
+===================================================== -->
 
-<nav class="navbar">
+<nav class="home-navbar">
 
     <div class="nav-container">
 
@@ -90,303 +88,151 @@
 
 
 
-<!-- =========================================================
-     FULL SCREEN HERO
-========================================================= -->
+<!-- =====================================================
+     HERO
+===================================================== -->
 
 <main class="hero">
 
 
-    <!-- =====================================================
-         GENERAL MATHEMATICAL BACKGROUND
-    ====================================================== -->
+    <!-- subtle mathematical background -->
 
     <div class="math-background">
 
 
-        <!-- ASYMPTOTIC / MULTISCALE -->
-
         <div class="math-note asymptotic-note">
 
-            <div>
-                0 &lt; ε ≪ 1
-            </div>
+            0 &lt; ε ≪ 1
 
-            <div>
-                t<sub>0</sub> = t,
-                &nbsp;
-                t<sub>1</sub> = εt,
-                &nbsp;
-                t<sub>2</sub> = ε²t
-            </div>
+            <br>
+
+            t<sub>0</sub> = t,
+            &nbsp;
+            t<sub>1</sub> = εt,
+            &nbsp;
+            t<sub>2</sub> = ε²t
 
         </div>
 
 
 
-        <!-- BOUNDARY LAYER -->
+        <!-- Boundary-layer style visual -->
 
-        <div class="background-label boundary-label">
-
-            Boundary layer
-
-        </div>
-
-
-        <svg class="boundary-layer-graphic"
-             viewBox="0 0 400 250"
+        <svg class="boundary-graphic"
+             viewBox="0 0 400 240"
              xmlns="http://www.w3.org/2000/svg">
 
-
-            <!-- AXES -->
-
-            <line x1="35"
-                  y1="210"
-                  x2="360"
-                  y2="210"
+            <line x1="30"
+                  y1="205"
+                  x2="365"
+                  y2="205"
                   class="math-line"/>
 
-            <line x1="35"
-                  y1="210"
-                  x2="35"
+            <line x1="30"
+                  y1="205"
+                  x2="30"
                   y2="35"
                   class="math-line"/>
 
 
-            <!-- BOUNDARY LAYER CURVES -->
-
             <path d="
-                M35 210
-                C65 130,95 95,150 80
-                C210 64,280 63,350 63
+                M30 205
+                C60 118,105 78,165 65
+                C225 52,290 52,355 52
             "
             class="math-curve"/>
 
 
             <path d="
-                M35 210
-                C70 155,105 132,155 120
-                C215 105,285 103,350 103
+                M30 205
+                C70 150,110 125,170 112
+                C230 99,295 98,355 98
             "
             class="math-curve faint"/>
 
 
             <path d="
-                M35 210
-                C75 175,110 160,160 150
-                C220 140,285 138,350 138
+                M30 205
+                C75 170,120 152,175 143
+                C235 135,300 134,355 134
             "
             class="math-curve faint"/>
 
 
-            <!-- CHARACTERISTIC SCALE -->
-
-            <line x1="150"
-                  y1="65"
-                  x2="150"
-                  y2="210"
+            <line x1="160"
+                  y1="55"
+                  x2="160"
+                  y2="205"
                   class="dash-line"/>
 
 
-            <text x="355"
-                  y="228"
-                  class="axis-label">
+            <text x="117"
+                  y="43"
+                  class="math-label">
 
-                x
-
-            </text>
-
-
-            <text x="17"
-                  y="40"
-                  class="axis-label">
-
-                y
+                Boundary layer
 
             </text>
-
 
         </svg>
 
 
 
-        <!-- FLUID DYNAMICS EQUATION -->
+        <!-- phase plane -->
 
-        <div class="math-note fluid-equation">
-
-            ∂u/∂t
-            +
-            u ∂u/∂x
-            =
-            −(1/ρ) ∂p/∂x
-            +
-            ν ∂²u/∂y²
-
-        </div>
-
-
-
-        <!-- PHASE PLANE / MATHEMATICAL BIOLOGY -->
-
-        <svg class="phase-plane"
-             viewBox="0 0 420 330"
+        <svg class="phase-graphic"
+             viewBox="0 0 420 310"
              xmlns="http://www.w3.org/2000/svg">
 
 
             <line x1="55"
-                  y1="270"
+                  y1="260"
                   x2="360"
-                  y2="270"
+                  y2="260"
                   class="math-line"/>
-
 
             <line x1="55"
-                  y1="270"
+                  y1="260"
                   x2="55"
-                  y2="30"
+                  y2="35"
                   class="math-line"/>
 
 
             <ellipse cx="180"
-                     cy="155"
+                     cy="150"
                      rx="120"
-                     ry="43"
-                     class="phase-orbit"/>
+                     ry="45"
+                     class="phase-line"/>
 
             <ellipse cx="180"
-                     cy="155"
+                     cy="150"
                      rx="90"
-                     ry="31"
-                     class="phase-orbit"/>
+                     ry="33"
+                     class="phase-line"/>
 
             <ellipse cx="180"
-                     cy="155"
-                     rx="62"
-                     ry="22"
-                     class="phase-orbit"/>
+                     cy="150"
+                     rx="61"
+                     ry="23"
+                     class="phase-line"/>
 
             <ellipse cx="180"
-                     cy="155"
-                     rx="34"
-                     ry="13"
-                     class="phase-orbit"/>
+                     cy="150"
+                     rx="32"
+                     ry="12"
+                     class="phase-line"/>
 
 
             <circle cx="180"
-                    cy="155"
+                    cy="150"
                     r="3"
                     class="phase-point"/>
 
-
-            <text x="365"
-                  y="287"
-                  class="axis-label">
-
-                u
-
-            </text>
-
-
-            <text x="38"
-                  y="35"
-                  class="axis-label">
-
-                v
-
-            </text>
-
-
         </svg>
 
 
 
-        <!-- MATHEMATICAL BIOLOGY NETWORK -->
-
-        <svg class="biology-network"
-             viewBox="0 0 360 330"
-             xmlns="http://www.w3.org/2000/svg">
-
-
-            <line x1="50"
-                  y1="160"
-                  x2="120"
-                  y2="85"
-                  class="network-line"/>
-
-            <line x1="120"
-                  y1="85"
-                  x2="195"
-                  y2="130"
-                  class="network-line"/>
-
-            <line x1="195"
-                  y1="130"
-                  x2="275"
-                  y2="70"
-                  class="network-line"/>
-
-            <line x1="195"
-                  y1="130"
-                  x2="270"
-                  y2="220"
-                  class="network-line"/>
-
-            <line x1="120"
-                  y1="85"
-                  x2="110"
-                  y2="240"
-                  class="network-line"/>
-
-            <line x1="270"
-                  y1="220"
-                  x2="315"
-                  y2="270"
-                  class="network-line"/>
-
-
-            <circle cx="50"
-                    cy="160"
-                    r="5"
-                    class="network-node"/>
-
-            <circle cx="120"
-                    cy="85"
-                    r="7"
-                    class="network-node"/>
-
-            <circle cx="195"
-                    cy="130"
-                    r="7"
-                    class="network-node"/>
-
-            <circle cx="275"
-                    cy="70"
-                    r="5"
-                    class="network-node"/>
-
-            <circle cx="270"
-                    cy="220"
-                    r="6"
-                    class="network-node"/>
-
-            <circle cx="110"
-                    cy="240"
-                    r="5"
-                    class="network-node"/>
-
-            <circle cx="315"
-                    cy="270"
-                    r="5"
-                    class="network-node"/>
-
-
-        </svg>
-
-
-
-        <!-- GENERIC BIOLOGY ODE -->
-
-        <div class="math-note biology-equation">
+        <div class="math-note biology-note">
 
             du/dt = f(u,v)
 
@@ -394,231 +240,263 @@
 
             dv/dt = g(u,v)
 
-            <span>
-                Mathematical Biology
-            </span>
+            <small>
+                Mathematical biology
+            </small>
 
         </div>
 
 
 
-        <!-- ASYMPTOTIC EXPANSION -->
+        <div class="math-note fluid-note">
+
+            ∂u/∂t
+            +
+            u∂u/∂x
+            =
+            −(1/ρ)∂p/∂x
+            +
+            ν∂²u/∂y²
+
+        </div>
+
+
 
         <div class="math-note expansion-note">
 
             u ∼ u₀ + εu₁ + ε²u₂ + ···
 
-            <span>
+            <small>
                 Asymptotic expansion
+            </small>
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- =================================================
+         MAIN CONTENT
+    ================================================== -->
+
+    <div class="hero-container">
+
+
+        <!-- LEFT -->
+
+        <div class="hero-text">
+
+
+            <div class="hero-kicker">
+
+                PhD Researcher in Applied Mathematics
+
+            </div>
+
+
+            <h1>
+
+                Ariba Shakeel
+
+            </h1>
+
+
+            <div class="gold-line"></div>
+
+
+            <div class="hero-affiliation">
+
+                School of Mathematics
+
+                <br>
+
+                University of Birmingham,
+                United Kingdom
+
+            </div>
+
+
+
+            <div class="hero-about">
+
+
+                <div class="hero-about-label">
+
+                    About
+
+                </div>
+
+
+                <p>
+
+                    I am a PhD researcher in Applied Mathematics
+                    at the University of Birmingham, working under
+                    the supervision of
+
+                    <a href="https://www.birmingham.ac.uk/staff/profiles/maths/gallagher-meurig"
+                       target="_blank">
+
+                        Dr Meurig Gallagher
+
+                    </a>
+
+                    and
+
+                    <a href="https://www.birmingham.ac.uk/staff/profiles/metabolism-systems/smith-david"
+                       target="_blank">
+
+                        Professor David J. Smith
+
+                    </a>.
+
+                </p>
+
+
+                <p>
+
+                    My research spans mathematical modelling,
+                    mathematical biology, asymptotic analysis
+                    and scientific computation, with current
+                    applications to physiological systems.
+
+                </p>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- RIGHT: YOUR PHOTO -->
+
+        <div class="hero-photo-wrapper">
+
+            <img src="ariba-photo.jpg"
+                 alt="Ariba Shakeel"
+                 class="hero-photo">
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- =================================================
+         PROFILE LINKS
+    ================================================== -->
+
+    <div class="profile-row">
+
+
+        <a href="YOUR_GOOGLE_SCHOLAR_URL"
+           target="_blank"
+           class="profile-item">
+
+            <div class="profile-circle scholar">
+
+                <i class="fa-solid fa-graduation-cap"></i>
+
+            </div>
+
+            <span>
+                Google Scholar
             </span>
 
-        </div>
+        </a>
 
 
-    </div>
 
+        <a href="https://orcid.org/0009-0005-8796-5896"
+           target="_blank"
+           class="profile-item">
 
+            <div class="profile-circle orcid">
 
-    <!-- =====================================================
-         HERO CONTENT
-    ====================================================== -->
+                <i class="fa-brands fa-orcid"></i>
 
-    <div class="hero-content">
+            </div>
 
+            <span>
+                ORCID
+            </span>
 
-        <div class="hero-kicker">
+        </a>
 
-            PhD Researcher in Applied Mathematics
 
-        </div>
 
+        <a href="YOUR_RESEARCHGATE_URL"
+           target="_blank"
+           class="profile-item">
 
-        <h1>
+            <div class="profile-circle researchgate">
 
-            Ariba Shakeel
+                <i class="fa-brands fa-researchgate"></i>
 
-        </h1>
+            </div>
 
+            <span>
+                ResearchGate
+            </span>
 
-        <div class="gold-divider"></div>
+        </a>
 
 
-        <p class="hero-affiliation">
 
-            School of Mathematics
+        <a href="YOUR_LINKEDIN_URL"
+           target="_blank"
+           class="profile-item">
 
-            <br>
+            <div class="profile-circle linkedin">
 
-            University of Birmingham,
-            United Kingdom
+                <i class="fa-brands fa-linkedin"></i>
 
-        </p>
+            </div>
 
+            <span>
+                LinkedIn
+            </span>
 
-        <p class="hero-summary">
+        </a>
 
-            Mathematical modelling and analysis across
-            biological, physiological and physical systems.
 
-        </p>
 
+        <a href="Ariba_CV_tex.pdf"
+           target="_blank"
+           class="profile-item">
 
+            <div class="profile-circle">
 
-        <!-- =================================================
-             LARGE PROFILE ICONS
-        ================================================== -->
+                <i class="fa-regular fa-file-lines"></i>
 
-        <div class="profile-cards">
+            </div>
 
+            <span>
+                CV
+            </span>
 
-            <!-- GOOGLE SCHOLAR -->
+        </a>
 
-            <a href="https://scholar.google.com/citations?view_op=list_works&hl=en&hl=en&user=sVrRHyoAAAAJ"
-               target="_blank"
-               rel="noopener noreferrer"
-               class="profile-card scholar-card">
-
-
-                <div class="profile-icon">
-
-                    <i class="fa-solid fa-graduation-cap"></i>
-
-                </div>
-
-
-                <span>
-
-                    Google Scholar
-
-                </span>
-
-
-            </a>
-
-
-
-            <!-- ORCID -->
-
-            <a href="https://orcid.org/0009-0005-8796-5896"
-               target="_blank"
-               rel="noopener noreferrer"
-               class="profile-card">
-
-
-                <div class="profile-icon orcid-icon">
-
-                    <i class="fa-brands fa-orcid"></i>
-
-                </div>
-
-
-                <span>
-
-                    ORCID
-
-                </span>
-
-
-            </a>
-
-
-
-            <!-- RESEARCHGATE -->
-
-            <a href="https://www.researchgate.net/profile/Ariba-Shakeel?ev=hdr_xprf"
-               target="_blank"
-               rel="noopener noreferrer"
-               class="profile-card">
-
-
-                <div class="profile-icon researchgate-icon">
-
-                    <i class="fa-brands fa-researchgate"></i>
-
-                </div>
-
-
-                <span>
-
-                    ResearchGate
-
-                </span>
-
-
-            </a>
-
-
-
-            <!-- LINKEDIN -->
-
-            <a href="https://www.linkedin.com/in/ariba-shakeel-23b329423?utm_source=share_via&utm_content=profile&utm_medium=member_ios"
-               target="_blank"
-               rel="noopener noreferrer"
-               class="profile-card">
-
-
-                <div class="profile-icon linkedin-icon">
-
-                    <i class="fa-brands fa-linkedin"></i>
-
-                </div>
-
-
-                <span>
-
-                    LinkedIn
-
-                </span>
-
-
-            </a>
-
-
-
-            <!-- CV -->
-
-            <a href="Ariba_CV_tex.pdf"
-               target="_blank"
-               rel="noopener noreferrer"
-               class="profile-card">
-
-
-                <div class="profile-icon">
-
-                    <i class="fa-regular fa-file-lines"></i>
-
-                </div>
-
-
-                <span>
-
-                    CV
-
-                </span>
-
-
-            </a>
-
-
-        </div>
-
-
-    </div>
-
-
-
-    <div class="hero-scroll">
-
-        <span>
-            Explore
-        </span>
-
-        <i class="fa-solid fa-chevron-down"></i>
 
     </div>
 
 
 </main>
+
+
+<footer class="home-footer">
+
+    © 2026 Ariba Shakeel
+    &nbsp; · &nbsp;
+    Applied Mathematics
+    &nbsp; · &nbsp;
+    University of Birmingham
+
+</footer>
 
 
 </body>
