@@ -1,24 +1,32 @@
-/* =========================================================
-   GENERAL
-========================================================= */
+/* =====================================================
+   GLOBAL
+===================================================== */
 
 * {
     box-sizing: border-box;
 }
 
-html,
-body {
-    margin: 0;
-    min-height: 100%;
+html {
+    scroll-behavior: smooth;
 }
 
 body {
+
+    margin: 0;
+
     font-family:
         "Segoe UI",
         Arial,
         sans-serif;
 
-    background: #03142d;
+    background:
+        #fbfaf7;
+
+    color:
+        #172033;
+
+    line-height:
+        1.65;
 }
 
 a {
@@ -26,39 +34,47 @@ a {
 }
 
 
-/* =========================================================
-   NAVIGATION
-========================================================= */
+/* =====================================================
+   HOMEPAGE
+===================================================== */
 
-.navbar {
-
-    position: absolute;
-
-    top: 0;
-    left: 0;
-
-    width: 100%;
-
-    z-index: 50;
+.homepage {
 
     background:
-        rgba(2, 12, 31, .72);
+        #03142d;
+}
+
+
+/* =====================================================
+   NAVIGATION - HOME
+===================================================== */
+
+.home-navbar {
+
+    height:
+        68px;
+
+    position:
+        relative;
+
+    z-index:
+        50;
+
+    background:
+        #020e22;
 
     border-bottom:
         1px solid rgba(255,255,255,.10);
-
-    backdrop-filter:
-        blur(10px);
 }
 
 
 .nav-container {
 
     width:
-        min(1400px, 94%);
+        min(1380px, 94%);
 
-    min-height:
-        72px;
+    height:
+        100%;
 
     margin:
         auto;
@@ -85,7 +101,7 @@ a {
         serif;
 
     font-size:
-        28px;
+        25px;
 
     font-weight:
         600;
@@ -101,20 +117,17 @@ a {
         center;
 
     gap:
-        30px;
+        26px;
 }
 
 
 .nav-links a {
 
-    position:
-        relative;
-
     color:
-        #edf2f8;
+        #ecf1f8;
 
     font-size:
-        14px;
+        12px;
 
     font-weight:
         600;
@@ -124,71 +137,32 @@ a {
 }
 
 
-.nav-links a:hover {
-
-    color:
-        #e4ac36;
-}
-
-
+.nav-links a:hover,
 .nav-links a.active {
 
     color:
-        #e4ac36;
-}
-
-
-.nav-links a.active::after {
-
-    content: "";
-
-    position:
-        absolute;
-
-    left:
-        0;
-
-    right:
-        0;
-
-    bottom:
-        -25px;
-
-    height:
-        2px;
-
-    background:
-        #e4a72f;
+        #e0a637;
 }
 
 
 
-/* =========================================================
+/* =====================================================
    HERO
-========================================================= */
+===================================================== */
 
 .hero {
 
     position:
         relative;
 
-    width:
-        100%;
-
     min-height:
-        100vh;
+        calc(100vh - 68px);
 
     overflow:
         hidden;
 
-    display:
-        flex;
-
-    align-items:
-        center;
-
-    justify-content:
-        center;
+    padding:
+        50px 0 28px;
 
     color:
         white;
@@ -196,28 +170,27 @@ a {
     background:
 
         radial-gradient(
-            circle at 22% 44%,
-            rgba(58, 79, 190, .25),
+            circle at 22% 43%,
+            rgba(59,77,185,.22),
             transparent 28%
         ),
 
         radial-gradient(
-            circle at 82% 35%,
-            rgba(17, 139, 180, .12),
-            transparent 30%
+            circle at 82% 37%,
+            rgba(17,126,167,.12),
+            transparent 28%
         ),
 
         linear-gradient(
             125deg,
-            #020918 0%,
-            #061733 48%,
-            #02192f 100%
+            #020918,
+            #061936 53%,
+            #03192f
         );
 }
 
 
-
-/* subtle background grid */
+/* subtle grid */
 
 .hero::before {
 
@@ -243,14 +216,17 @@ a {
         );
 
     background-size:
-        55px 55px;
+        52px 52px;
+
+    pointer-events:
+        none;
 }
 
 
 
-/* =========================================================
-   BACKGROUND MATHEMATICS
-========================================================= */
+/* =====================================================
+   MATH BACKGROUND
+===================================================== */
 
 .math-background {
 
@@ -259,9 +235,6 @@ a {
 
     inset:
         0;
-
-    z-index:
-        1;
 
     pointer-events:
         none;
@@ -274,11 +247,10 @@ a {
         absolute;
 
     color:
-        rgba(190, 216, 242, .29);
+        rgba(185,211,238,.20);
 
     font-family:
         Georgia,
-        "Times New Roman",
         serif;
 
     font-style:
@@ -286,113 +258,85 @@ a {
 }
 
 
-.math-note span {
+.math-note small {
 
     display:
         block;
 
     margin-top:
-        8px;
-
-    font-size:
-        .72em;
+        7px;
 
     font-style:
         normal;
+
+    font-size:
+        11px;
 }
 
 
 .asymptotic-note {
 
-    top:
-        12%;
-
     left:
         4%;
 
+    top:
+        5%;
+
     font-size:
-        22px;
+        17px;
 
     line-height:
-        2.1;
+        2;
 }
 
 
-.fluid-equation {
-
-    left:
-        3%;
-
-    bottom:
-        18%;
-
-    max-width:
-        340px;
-
-    font-size:
-        20px;
-}
-
-
-.biology-equation {
+.biology-note {
 
     right:
-        6%;
+        5%;
 
     top:
-        14%;
+        6%;
 
     font-size:
-        21px;
+        17px;
 
     line-height:
         1.7;
 }
 
 
+.fluid-note {
+
+    left:
+        3%;
+
+    bottom:
+        20%;
+
+    width:
+        300px;
+
+    font-size:
+        16px;
+}
+
+
 .expansion-note {
 
     right:
-        7%;
+        5%;
 
     bottom:
-        16%;
+        19%;
 
     font-size:
-        18px;
+        14px;
 }
 
 
-.background-label {
 
-    position:
-        absolute;
-
-    color:
-        rgba(184, 210, 238, .38);
-
-    font-family:
-        Georgia,
-        serif;
-
-    font-size:
-        15px;
-}
-
-
-.boundary-label {
-
-    left:
-        9%;
-
-    top:
-        30%;
-}
-
-
-/* boundary layer graphic */
-
-.boundary-layer-graphic {
+.boundary-graphic {
 
     position:
         absolute;
@@ -401,26 +345,48 @@ a {
         1%;
 
     top:
-        27%;
+        23%;
 
     width:
         25%;
 
     max-width:
-        410px;
+        390px;
 
     opacity:
-        .50;
+        .35;
+}
+
+
+.phase-graphic {
+
+    position:
+        absolute;
+
+    right:
+        19%;
+
+    top:
+        19%;
+
+    width:
+        23%;
+
+    max-width:
+        360px;
+
+    opacity:
+        .28;
 }
 
 
 .math-line {
 
     stroke:
-        rgba(180,211,238,.6);
+        rgba(187,214,239,.60);
 
     stroke-width:
-        1.2;
+        1;
 }
 
 
@@ -430,7 +396,7 @@ a {
         none;
 
     stroke:
-        rgba(109,195,230,.72);
+        rgba(90,180,225,.78);
 
     stroke-width:
         1.5;
@@ -440,14 +406,14 @@ a {
 .math-curve.faint {
 
     opacity:
-        .55;
+        .5;
 }
 
 
 .dash-line {
 
     stroke:
-        rgba(123,169,209,.5);
+        rgba(125,167,207,.5);
 
     stroke-width:
         1;
@@ -457,114 +423,46 @@ a {
 }
 
 
-.axis-label {
+.math-label {
 
     fill:
-        rgba(185,211,238,.55);
+        rgba(181,207,234,.60);
 
     font-family:
         Georgia,
         serif;
 
-    font-style:
-        italic;
-
     font-size:
-        16px;
+        14px;
 }
 
 
-/* phase plane */
-
-.phase-plane {
-
-    position:
-        absolute;
-
-    right:
-        18%;
-
-    top:
-        23%;
-
-    width:
-        25%;
-
-    max-width:
-        400px;
-
-    opacity:
-        .40;
-}
-
-
-.phase-orbit {
+.phase-line {
 
     fill:
         none;
 
     stroke:
-        rgba(81,173,221,.68);
-
-    stroke-width:
-        1.1;
-}
-
-
-.phase-point {
-
-    fill:
-        rgba(91,196,237,.9);
-}
-
-
-/* biology network */
-
-.biology-network {
-
-    position:
-        absolute;
-
-    right:
-        -2%;
-
-    top:
-        12%;
-
-    width:
-        20%;
-
-    max-width:
-        350px;
-
-    opacity:
-        .36;
-}
-
-
-.network-line {
-
-    stroke:
-        rgba(47,157,215,.64);
+        rgba(74,175,222,.7);
 
     stroke-width:
         1;
 }
 
 
-.network-node {
+.phase-point {
 
     fill:
-        rgba(64,179,232,.85);
+        #5ec1e5;
 }
 
 
 
-/* =========================================================
-   HERO MAIN CONTENT
-========================================================= */
+/* =====================================================
+   HERO LAYOUT
+===================================================== */
 
-.hero-content {
+.hero-container {
 
     position:
         relative;
@@ -573,39 +471,50 @@ a {
         10;
 
     width:
-        min(780px, 90%);
+        min(1000px, 86%);
 
-    padding:
-        105px 20px 75px;
+    margin:
+        auto;
 
-    text-align:
+    display:
+        grid;
+
+    grid-template-columns:
+        1.35fr .65fr;
+
+    gap:
+        65px;
+
+    align-items:
         center;
 }
 
 
+
+/* =====================================================
+   HERO TEXT
+===================================================== */
+
 .hero-kicker {
 
     color:
-        #e0a834;
+        #dfa638;
 
     font-size:
-        17px;
+        13px;
 
     font-weight:
         700;
 
     margin-bottom:
-        14px;
+        7px;
 }
 
 
-.hero-content h1 {
+.hero-text h1 {
 
     margin:
         0;
-
-    color:
-        white;
 
     font-family:
         Georgia,
@@ -613,64 +522,39 @@ a {
         serif;
 
     font-size:
-        clamp(58px, 7vw, 92px);
+        clamp(44px, 5vw, 61px);
 
     font-weight:
         500;
 
     line-height:
-        .98;
-
-    letter-spacing:
-        -1px;
+        1;
 }
 
 
-.gold-divider {
+.gold-line {
 
     width:
-        56px;
+        42px;
 
     height:
         2px;
 
     margin:
-        27px auto;
+        18px 0;
 
     background:
-        #dda336;
+        #dba23a;
 }
 
 
 .hero-affiliation {
 
-    margin:
-        0;
-
     color:
-        #edf3fa;
+        #e5edf7;
 
     font-size:
-        18px;
-
-    line-height:
-        1.65;
-}
-
-
-.hero-summary {
-
-    max-width:
-        650px;
-
-    margin:
-        25px auto 0;
-
-    color:
-        #cbd7e6;
-
-    font-size:
-        18px;
+        14px;
 
     line-height:
         1.6;
@@ -678,113 +562,173 @@ a {
 
 
 
-/* =========================================================
-   LARGE PROFILE ICON CARDS
-========================================================= */
+/* =====================================================
+   ABOUT IN HERO
+===================================================== */
 
-.profile-cards {
+.hero-about {
 
-    display:
-        flex;
-
-    justify-content:
-        center;
-
-    align-items:
-        stretch;
-
-    flex-wrap:
-        wrap;
-
-    gap:
-        18px;
+    max-width:
+        580px;
 
     margin-top:
-        37px;
+        27px;
+
+    padding-top:
+        21px;
+
+    border-top:
+        1px solid rgba(255,255,255,.14);
 }
 
 
-.profile-card {
+.hero-about-label {
 
-    width:
-        125px;
-
-    min-height:
-        130px;
-
-    padding:
-        18px 10px 14px;
-
-    display:
-        flex;
-
-    flex-direction:
-        column;
-
-    align-items:
-        center;
-
-    justify-content:
-        center;
-
-    gap:
-        11px;
+    margin-bottom:
+        10px;
 
     color:
-        white;
+        #dfa638;
 
-    border:
-        1px solid rgba(144,184,220,.34);
+    text-transform:
+        uppercase;
 
-    border-radius:
-        14px;
-
-    background:
-        rgba(6,27,58,.72);
-
-    box-shadow:
-        0 12px 28px rgba(0,0,0,.12);
-
-    transition:
-        transform .2s,
-        border-color .2s,
-        background .2s;
-}
-
-
-.profile-card:hover {
-
-    transform:
-        translateY(-5px);
-
-    border-color:
-        rgba(224,169,57,.78);
-
-    background:
-        rgba(9,38,76,.9);
-}
-
-
-.profile-card span {
-
-    color:
-        #ecf3fb;
+    letter-spacing:
+        1.8px;
 
     font-size:
-        13px;
+        9px;
+
+    font-weight:
+        700;
+}
+
+
+.hero-about p {
+
+    margin:
+        8px 0;
+
+    color:
+        #becddd;
+
+    font-size:
+        12.5px;
+
+    line-height:
+        1.65;
+}
+
+
+.hero-about a {
+
+    color:
+        #75c8ed;
 
     font-weight:
         600;
 }
 
 
-.profile-icon {
+
+/* =====================================================
+   PHOTO
+===================================================== */
+
+.hero-photo-wrapper {
+
+    display:
+        flex;
+
+    justify-content:
+        center;
+
+    position:
+        relative;
+}
+
+
+.hero-photo {
 
     width:
-        63px;
+        210px;
 
     height:
-        63px;
+        275px;
+
+    object-fit:
+        cover;
+
+    object-position:
+        center 42%;
+
+    border-radius:
+        13px;
+
+    border:
+        1px solid rgba(255,255,255,.16);
+
+    box-shadow:
+        0 18px 40px rgba(0,0,0,.28);
+}
+
+
+
+/* =====================================================
+   PROFILE ICON ROW
+===================================================== */
+
+.profile-row {
+
+    position:
+        relative;
+
+    z-index:
+        10;
+
+    display:
+        flex;
+
+    justify-content:
+        center;
+
+    align-items:
+        flex-start;
+
+    gap:
+        32px;
+
+    margin:
+        38px auto 0;
+}
+
+
+.profile-item {
+
+    width:
+        90px;
+
+    text-align:
+        center;
+
+    color:
+        white;
+
+    transition:
+        .2s;
+}
+
+
+.profile-circle {
+
+    width:
+        64px;
+
+    height:
+        64px;
+
+    margin:
+        auto;
 
     display:
         flex;
@@ -795,200 +739,411 @@ a {
     justify-content:
         center;
 
+    border:
+        1px solid rgba(255,255,255,.22);
+
+    border-radius:
+        50%;
+
+    background:
+        rgba(6,28,58,.7);
+
     color:
         white;
 
     font-size:
-        38px;
+        29px;
+
+    transition:
+        .2s;
 }
 
 
-.orcid-icon {
+.profile-item:hover
+.profile-circle {
+
+    transform:
+        translateY(-4px);
+
+    border-color:
+        #dca53d;
+}
+
+
+.profile-item span {
+
+    display:
+        block;
+
+    margin-top:
+        8px;
+
+    color:
+        #e6eef7;
+
+    font-size:
+        10px;
+
+    font-weight:
+        600;
+}
+
+
+.profile-circle.orcid {
 
     color:
         #a6ce39;
 
     font-size:
-        45px;
+        35px;
 }
 
 
-.researchgate-icon {
+.profile-circle.researchgate {
 
     color:
-        #00d0b5;
+        #00cdb5;
 
     font-size:
-        43px;
+        34px;
 }
 
 
-.linkedin-icon {
+.profile-circle.linkedin {
 
     color:
-        #1d95d0;
+        #299bd3;
 
     font-size:
-        42px;
+        33px;
 }
 
 
-.scholar-card .profile-icon {
+
+/* =====================================================
+   HOME FOOTER
+===================================================== */
+
+.home-footer {
+
+    padding:
+        12px;
+
+    text-align:
+        center;
 
     color:
-        #e9eef6;
-}
-
-
-
-/* small gold accent underneath */
-
-.profile-card::after {
-
-    content: "";
-
-    width:
-        32px;
-
-    height:
-        2px;
+        #8195ac;
 
     background:
-        #dca338;
+        #020c1e;
 
-    opacity:
-        .85;
+    font-size:
+        9px;
 }
 
 
 
-/* =========================================================
-   EXPLORE ARROW
-========================================================= */
+/* =====================================================
+   INTERNAL PAGES
+   IMPORTANT: THESE ARE LIGHT
+===================================================== */
 
-.hero-scroll {
+.internal-nav {
 
-    position:
-        absolute;
+    background:
+        #ffffff;
 
-    z-index:
-        10;
+    border-bottom:
+        1px solid #e0e4e7;
+}
 
-    left:
-        50%;
 
-    bottom:
-        20px;
+.internal-nav .brand {
 
-    transform:
-        translateX(-50%);
+    color:
+        #142d4c;
+}
+
+
+.internal-links {
 
     display:
         flex;
 
-    flex-direction:
-        column;
+    gap:
+        20px;
+}
 
-    align-items:
-        center;
+
+.internal-links a {
+
+    color:
+        #4e5c6c;
+
+    font-size:
+        12px;
+
+    font-weight:
+        600;
+
+    padding:
+        22px 0;
+}
+
+
+.internal-links a:hover,
+.internal-links a.active {
+
+    color:
+        #15518c;
+}
+
+
+
+.page-header {
+
+    padding:
+        75px 0 50px;
+
+    background:
+        #f1f3f5;
+
+    border-bottom:
+        1px solid #e1e4e7;
+}
+
+
+.page-header .container,
+.section .container {
+
+    width:
+        min(1060px, 90%);
+
+    margin:
+        auto;
+}
+
+
+.page-header h1 {
+
+    margin:
+        5px 0;
+
+    color:
+        #142e4d;
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size:
+        46px;
+
+    font-weight:
+        500;
+}
+
+
+.page-header p {
+
+    color:
+        #687588;
+}
+
+
+.section {
+
+    padding:
+        65px 0;
+
+    background:
+        #fbfaf7;
+
+    color:
+        #172033;
+}
+
+
+.soft-section {
+
+    background:
+        #f2f4f6;
+}
+
+
+.section h2 {
+
+    color:
+        #173858;
+
+    font-family:
+        Georgia,
+        serif;
+}
+
+
+.section p {
+
+    color:
+        #596779;
+}
+
+
+
+/* Research Methods */
+
+.methods-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        1fr 1fr;
 
     gap:
-        4px;
+        55px;
+}
+
+
+
+/* Publications */
+
+.publication {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        80px 1fr;
+
+    gap:
+        30px;
+
+    padding:
+        26px 0;
+
+    border-bottom:
+        1px solid #dfe3e6;
+}
+
+
+.publication-year {
 
     color:
-        #8399b2;
+        #b9832d;
 
-    font-size:
-        9px;
-
-    letter-spacing:
-        1.4px;
-
-    text-transform:
-        uppercase;
+    font-family:
+        Georgia,
+        serif;
 }
 
 
-.hero-scroll i {
+.publication h2 {
+
+    font-size:
+        18px;
+}
+
+
+
+/* Presentations / service */
+
+.presentation {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        70px 1fr;
+
+    gap:
+        25px;
+
+    padding:
+        18px 0;
+
+    border-bottom:
+        1px solid #dfe3e6;
+}
+
+
+
+/* awards */
+
+.award {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        110px 1fr;
+
+    gap:
+        30px;
+
+    padding:
+        20px 0;
+
+    border-bottom:
+        1px solid #dfe3e6;
+}
+
+
+
+/* general footer on internal pages */
+
+footer {
+
+    background:
+        #020c1e;
 
     color:
-        #dda433;
+        #8fa1b8;
+
+    padding:
+        18px 0;
 
     font-size:
-        19px;
+        10px;
+}
+
+
+.footer-content {
+
+    width:
+        min(1060px,90%);
+
+    margin:
+        auto;
+
+    display:
+        flex;
+
+    justify-content:
+        space-between;
 }
 
 
 
-/* =========================================================
-   TABLET
-========================================================= */
-
-@media (max-width: 1100px) {
-
-
-    .nav-links {
-
-        gap:
-            16px;
-    }
-
-
-    .nav-links a {
-
-        font-size:
-            12px;
-    }
-
-
-    .boundary-layer-graphic {
-
-        width:
-            30%;
-    }
-
-
-    .phase-plane {
-
-        right:
-            8%;
-
-        width:
-            30%;
-    }
-
-
-    .biology-network {
-
-        opacity:
-            .24;
-    }
-
-
-}
-
-
-
-/* =========================================================
+/* =====================================================
    MOBILE
-========================================================= */
+===================================================== */
 
 @media (max-width: 760px) {
 
 
-    /* navigation */
+    .home-navbar {
 
-    .navbar {
-
-        position:
-            relative;
-
-        background:
-            #03132d;
+        height:
+            auto;
     }
 
 
     .nav-container {
+
+        width:
+            90%;
 
         display:
             block;
@@ -1004,20 +1159,18 @@ a {
             block;
 
         margin-bottom:
-            10px;
+            9px;
 
         font-size:
-            22px;
+            20px;
     }
 
 
-    .nav-links {
+    .nav-links,
+    .internal-links {
 
         display:
             flex;
-
-        gap:
-            16px;
 
         overflow-x:
             auto;
@@ -1025,243 +1178,190 @@ a {
         white-space:
             nowrap;
 
-        padding-bottom:
-            5px;
+        gap:
+            15px;
     }
 
 
-    .nav-links::-webkit-scrollbar {
+    .nav-links::-webkit-scrollbar,
+    .internal-links::-webkit-scrollbar {
 
         display:
             none;
     }
 
 
-    .nav-links a {
-
-        font-size:
-            11px;
-    }
-
-
-    .nav-links a.active::after {
-
-        display:
-            none;
-    }
-
-
-
-    /* hero */
 
     .hero {
 
         min-height:
-            760px;
-    }
-
-
-    .hero-content {
-
-        width:
-            92%;
-
-        padding:
-            70px 10px 70px;
-    }
-
-
-    .hero-kicker {
-
-        font-size:
-            12px;
-    }
-
-
-    .hero-content h1 {
-
-        font-size:
-            49px;
-    }
-
-
-    .hero-affiliation {
-
-        font-size:
-            14px;
-    }
-
-
-    .hero-summary {
-
-        font-size:
-            14px;
-    }
-
-
-
-    /* keep mathematical identity visible */
-
-    .asymptotic-note {
-
-        top:
-            5%;
-
-        left:
-            3%;
-
-        font-size:
-            13px;
-
-        opacity:
-            .55;
-    }
-
-
-    .fluid-equation,
-    .biology-equation {
-
-        display:
-            none;
-    }
-
-
-    .boundary-label {
-
-        display:
-            none;
-    }
-
-
-    .boundary-layer-graphic {
-
-        left:
-            -13%;
-
-        top:
-            22%;
-
-        width:
-            66%;
-
-        opacity:
-            .22;
-    }
-
-
-    .phase-plane {
-
-        right:
-            -25%;
-
-        top:
-            17%;
-
-        width:
-            70%;
-
-        opacity:
-            .20;
-    }
-
-
-    .biology-network {
-
-        right:
-            -20%;
-
-        bottom:
-            2%;
-
-        top:
             auto;
 
+        padding:
+            45px 0 35px;
+    }
+
+
+    .hero-container {
+
         width:
-            65%;
+            88%;
 
-        opacity:
-            .16;
-    }
-
-
-    .expansion-note {
-
-        right:
-            4%;
-
-        bottom:
-            6%;
-
-        font-size:
-            12px;
-
-        opacity:
-            .45;
-    }
-
-
-
-    /* profile cards */
-
-    .profile-cards {
+        grid-template-columns:
+            1fr;
 
         gap:
-            10px;
+            28px;
+    }
+
+
+    .hero-text {
+
+        text-align:
+            center;
+    }
+
+
+    .hero-text h1 {
+
+        font-size:
+            43px;
+    }
+
+
+    .gold-line {
+
+        margin:
+            16px auto;
+    }
+
+
+    .hero-about {
+
+        text-align:
+            left;
+    }
+
+
+    .hero-photo {
+
+        width:
+            155px;
+
+        height:
+            195px;
+    }
+
+
+    .profile-row {
+
+        width:
+            90%;
+
+        flex-wrap:
+            wrap;
+
+        gap:
+            17px;
 
         margin-top:
             30px;
     }
 
 
-    .profile-card {
+    .profile-item {
 
         width:
-            92px;
-
-        min-height:
-            96px;
-
-        padding:
-            11px 5px 9px;
-
-        border-radius:
-            10px;
+            72px;
     }
 
 
-    .profile-icon {
+    .profile-circle {
 
         width:
-            42px;
+            51px;
 
         height:
-            42px;
+            51px;
+
+        font-size:
+            23px;
+    }
+
+
+    .profile-circle.orcid,
+    .profile-circle.researchgate,
+    .profile-circle.linkedin {
 
         font-size:
             27px;
     }
 
 
-    .orcid-icon,
-    .researchgate-icon,
-    .linkedin-icon {
 
-        font-size:
-            31px;
-    }
+    /* still show some maths */
 
-
-    .profile-card span {
-
-        font-size:
-            9.5px;
-    }
-
-
-    .profile-card::after {
+    .boundary-graphic {
 
         width:
-            22px;
+            58%;
+
+        left:
+            -25%;
+
+        opacity:
+            .15;
+    }
+
+
+    .phase-graphic {
+
+        width:
+            60%;
+
+        right:
+            -30%;
+
+        opacity:
+            .12;
+    }
+
+
+    .fluid-note,
+    .biology-note,
+    .expansion-note {
+
+        display:
+            none;
+    }
+
+
+    .asymptotic-note {
+
+        font-size:
+            11px;
+
+        opacity:
+            .55;
+    }
+
+
+
+    .methods-grid {
+
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .publication,
+    .award {
+
+        grid-template-columns:
+            1fr;
+
+        gap:
+            4px;
     }
 
 
