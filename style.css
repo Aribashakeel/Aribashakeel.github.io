@@ -1,3 +1,7 @@
+/* ==========================================================
+   ARIBA SHAKEEL — ACADEMIC WEBSITE
+========================================================== */
+
 * {
     box-sizing: border-box;
 }
@@ -8,10 +12,16 @@ html {
 
 body {
     margin: 0;
-    font-family: "Segoe UI", Arial, sans-serif;
-    color: #162033;
-    background: #ffffff;
-    line-height: 1.6;
+    background: #fbfaf7;
+    color: #172033;
+
+    font-family:
+        Inter,
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    line-height: 1.65;
 }
 
 a {
@@ -19,28 +29,37 @@ a {
 }
 
 .container {
-    width: min(1120px, 91%);
+    width: min(1100px, 90%);
     margin: auto;
 }
 
 
-/* =========================
+/* ==========================================================
    NAVIGATION
-========================= */
+========================================================== */
 
 .navbar {
     position: absolute;
     top: 0;
+    left: 0;
+
     width: 100%;
+
     z-index: 100;
-    background: rgba(2, 14, 37, 0.70);
-    border-bottom: 1px solid rgba(255,255,255,0.10);
-    backdrop-filter: blur(8px);
+
+    background:
+        rgba(3, 14, 35, 0.66);
+
+    border-bottom:
+        1px solid rgba(255,255,255,0.09);
+
+    backdrop-filter: blur(10px);
 }
 
-.nav-inner {
+.nav-container {
     width: min(1280px, 94%);
-    height: 64px;
+    min-height: 62px;
+
     margin: auto;
 
     display: flex;
@@ -49,237 +68,415 @@ a {
 }
 
 .brand {
-    color: white;
-    font-family: Georgia, serif;
-    font-size: 25px;
+    color: #ffffff;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 22px;
+
     font-weight: 600;
 }
 
 .nav-links {
     display: flex;
-    gap: 24px;
+    gap: 21px;
 }
 
 .nav-links a {
-    color: #f1f4fa;
-    font-size: 13px;
+    color: #e8edf6;
+
+    font-size: 12.5px;
+
     font-weight: 600;
+
+    transition: .2s;
 }
 
 .nav-links a:hover {
-    color: #f2b42c;
+    color: #e8b347;
 }
 
 
-/* =========================
+/* ==========================================================
    HERO
-========================= */
+========================================================== */
 
 .hero {
+    min-height: 595px;
+
     position: relative;
+
     overflow: hidden;
-    min-height: 520px;
+
     color: white;
 
     background:
-        radial-gradient(circle at 25% 35%,
-            rgba(51,91,217,.28),
-            transparent 25%),
+        radial-gradient(
+            circle at 18% 40%,
+            rgba(70, 90, 210, .28),
+            transparent 24%
+        ),
 
-        radial-gradient(circle at 70% 40%,
-            rgba(0,170,220,.10),
-            transparent 28%),
+        radial-gradient(
+            circle at 82% 41%,
+            rgba(0, 158, 196, .15),
+            transparent 28%
+        ),
 
-        radial-gradient(circle at 50% 30%,
-            rgba(37,74,150,.18),
-            transparent 35%),
+        radial-gradient(
+            circle at 52% 30%,
+            rgba(49, 77, 152, .16),
+            transparent 35%
+        ),
 
         linear-gradient(
             120deg,
-            #020b21 0%,
-            #071a45 48%,
-            #021932 100%
+            #020919 0%,
+            #07173a 48%,
+            #02172d 100%
         );
 }
 
 
-/* subtle mathematical grid */
+/* subtle stars */
 
-.hero::before {
+.hero-stars {
+    position: absolute;
+    inset: 0;
+
+    opacity: .32;
+
+    background-image:
+        radial-gradient(
+            rgba(255,255,255,.6) 1px,
+            transparent 1px
+        );
+
+    background-size:
+        52px 52px;
+}
+
+
+/* subtle grid */
+
+.hero::after {
     content: "";
+
     position: absolute;
     inset: 0;
 
     background-image:
         linear-gradient(
-            rgba(255,255,255,.022) 1px,
+            rgba(255,255,255,.018) 1px,
             transparent 1px
         ),
+
         linear-gradient(
             90deg,
-            rgba(255,255,255,.022) 1px,
+            rgba(255,255,255,.018) 1px,
             transparent 1px
         );
 
-    background-size: 52px 52px;
+    background-size:
+        54px 54px;
 }
 
 
-/* soft network glow */
+/* hero columns */
 
-.hero::after {
-    content: "";
-    position: absolute;
-
-    width: 430px;
-    height: 430px;
-
-    left: 17%;
-    top: 4%;
-
-    border-radius: 50%;
-
-    background:
-        radial-gradient(
-            circle,
-            rgba(62,113,255,.17),
-            transparent 62%
-        );
-}
-
-
-/* =========================
-   HERO GRID
-========================= */
-
-.hero-content {
-
+.hero-grid {
     width: min(1280px, 94%);
-    min-height: 520px;
+
+    min-height: 595px;
 
     margin: auto;
+
+    padding-top: 65px;
 
     display: grid;
 
     grid-template-columns:
-        0.78fr
+        .78fr
         1.35fr
-        0.95fr;
+        .95fr;
 
-    gap: 45px;
+    gap: 42px;
 
     align-items: center;
 
-    padding-top: 70px;
-
     position: relative;
-    z-index: 3;
+    z-index: 2;
 }
 
 
-/* =========================
-   LEFT MATH
-========================= */
+/* ==========================================================
+   SCIENTIFIC VISUALS
+========================================================== */
 
-.math-panel {
-    color: rgba(255,255,255,.75);
+.hero-science {
+    color: #dce7f7;
 }
 
-.math-heading {
-    color: #8fd7f6;
-    font-size: 13px;
-    margin-bottom: 12px;
-}
+.visual-label {
+    color: #7dd0ed;
 
-.equation {
-    font-family: Georgia, serif;
-    font-style: italic;
-    font-size: 18px;
-    line-height: 1.6;
-}
+    text-transform: uppercase;
 
-.epsilon {
-    font-family: Georgia, serif;
-    font-size: 17px;
-    margin: 14px 0;
-}
+    letter-spacing: 1.3px;
 
-.times {
-    font-family: Georgia, serif;
-    font-size: 15px;
-    margin-bottom: 12px;
-}
+    font-size: 10.5px;
 
-.plot-box svg {
-    width: 100%;
-    max-width: 260px;
-}
-
-
-/* =========================
-   CENTRE HERO
-========================= */
-
-.eyebrow {
-    color: #f3b52b;
-    font-size: 14px;
     font-weight: 700;
+
+    margin-bottom: 12px;
+}
+
+
+/* math */
+
+.math-expression {
+    font-family:
+        Georgia,
+        serif;
+
+    font-size: 19px;
+
+    line-height: 1.6;
+
+    color: #d9e4f5;
+}
+
+.small-equation {
+    font-family:
+        Georgia,
+        serif;
+
+    margin-top: 12px;
+
+    font-size: 17px;
+
+    color: #a7c2e3;
+}
+
+.multiscale-plot {
+    width: 100%;
+
+    max-width: 270px;
+
+    margin-top: 13px;
+}
+
+.svg-label {
+    fill: #9cb0ca;
+    font-size: 10px;
+}
+
+
+/* physiology */
+
+.physiology-model {
+    max-width: 340px;
+
+    margin: auto;
+}
+
+.model-top {
+    display: flex;
+    justify-content: center;
+}
+
+.model-middle {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+}
+
+.model-node {
+    min-width: 105px;
+
+    padding: 8px 10px;
+
+    border:
+        1px solid rgba(85,204,245,.65);
+
+    border-radius: 8px;
+
+    background:
+        rgba(7,31,67,.65);
+
+    text-align: center;
+
+    font-size: 11px;
+
+    color: #caebfa;
+}
+
+.model-node span {
+    display: block;
+
+    font-family:
+        Georgia,
+        serif;
+
+    margin-top: 2px;
+}
+
+.model-node.small {
+    min-width: 70px;
+}
+
+.model-node.central {
+    border:
+        1.5px solid #31c4ee;
+
+    background:
+        rgba(10,45,88,.8);
+}
+
+.model-arrow {
+    color: #68d4f5;
+
+    font-size: 18px;
+}
+
+.vertical-reversible {
+    color: #68d4f5;
+
+    font-size: 17px;
+
+    line-height: 22px;
+
+    text-align: center;
+}
+
+.clearance {
+    margin-top: 8px;
+
+    text-align: center;
+
+    color: #87a5c5;
+
+    font-size: 10px;
+}
+
+.clearance span {
+    color: #63d0f2;
+}
+
+
+/* time scale */
+
+.time-scale-strip {
+    margin-top: 25px;
+}
+
+.time-scale-line {
+    height: 3px;
+
+    border-radius: 4px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #8760d6,
+            #2bbde3,
+            #7ccf61
+        );
+}
+
+.time-scale-labels {
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-top: 6px;
+
+    color: #acc1db;
+
+    font-size: 10px;
+}
+
+
+/* ==========================================================
+   HERO MAIN
+========================================================== */
+
+.hero-kicker {
+    color: #e4ad3c;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
     margin-bottom: 8px;
 }
 
 .hero-main h1 {
     margin: 0;
 
-    font-family: Georgia, serif;
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
 
-    font-size: clamp(43px, 4.5vw, 61px);
+    font-size:
+        clamp(44px, 4.6vw, 62px);
 
     line-height: 1;
 
-    letter-spacing: -1px;
+    letter-spacing: -.8px;
 }
 
 .gold-line {
-    width: 46px;
+    width: 44px;
     height: 2px;
 
-    background: #e4aa27;
-
     margin: 18px 0;
+
+    background: #dfa62d;
 }
 
-.hero-description {
+.hero-text {
+    max-width: 510px;
 
-    max-width: 520px;
-
-    margin: 0;
-
-    color: #e5ebf4;
+    color: #dce4f0;
 
     font-size: 15px;
 
     line-height: 1.65;
 }
 
-
-/* profile links */
-
 .profile-links {
     display: flex;
+
     flex-wrap: wrap;
 
-    gap: 15px;
+    gap: 14px;
 
     margin-top: 20px;
 }
 
 .profile-links a {
     color: #eef4ff;
-    font-size: 12.5px;
+
+    font-size: 12px;
+
+    transition: .2s;
+}
+
+.profile-links i {
+    margin-right: 4px;
 }
 
 .profile-links a:hover {
-    color: #efb436;
+    color: #efb845;
 }
 
 
@@ -287,322 +484,283 @@ a {
 
 .hero-buttons {
     display: flex;
+
     gap: 10px;
 
-    margin-top: 22px;
+    margin-top: 23px;
 }
 
-.btn {
-
+.button {
     display: inline-block;
 
-    padding: 9px 18px;
+    padding: 9px 17px;
+
+    border:
+        1px solid rgba(255,255,255,.37);
 
     border-radius: 5px;
 
-    border:
-        1px solid rgba(255,255,255,.40);
-
     color: white;
 
-    font-size: 13px;
+    font-size: 12.5px;
 
     font-weight: 600;
 
     transition: .2s;
 }
 
-.btn-primary {
+.button:hover {
+    transform: translateY(-2px);
+}
+
+.button-primary {
     border: none;
 
     background:
         linear-gradient(
             135deg,
-            #d7981e,
-            #efb836
+            #ce9122,
+            #eab342
         );
 }
 
-.btn:hover {
-    transform: translateY(-2px);
-}
 
-
-/* =========================
-   RIGHT MODEL
-========================= */
-
-.science-panel {
-    color: #dcecff;
-}
-
-.science-title {
-    text-align: center;
-
-    color: #8fd7f6;
-
-    font-size: 12px;
-
-    margin-bottom: 12px;
-}
-
-.model {
-
-    max-width: 330px;
-
-    margin: auto;
-}
-
-.model-row {
-
-    display: flex;
-
-    justify-content: center;
-    align-items: center;
-
-    gap: 9px;
-
-    margin: 8px 0;
-}
-
-.model-box {
-
-    min-width: 110px;
-
-    padding: 9px 12px;
-
-    text-align: center;
-
-    border:
-        1px solid rgba(87,206,255,.70);
-
-    border-radius: 9px;
-
-    background:
-        rgba(7,36,76,.55);
-
-    font-size: 12px;
-}
-
-.model-box.main {
-
-    border:
-        2px solid #20c7ff;
-
-    box-shadow:
-        0 0 18px rgba(27,193,255,.13);
-}
-
-.arrow {
-
-    color: #69d8ff;
-
-    font-size: 17px;
-}
-
-.vertical-arrow {
-
-    text-align: center;
-
-    color: #69d8ff;
-
-    height: 20px;
-
-    font-size: 18px;
-}
-
-
-/* timescale */
-
-.timescale {
-    margin-top: 25px;
-}
-
-.scale-line {
-
-    height: 3px;
-
-    border-radius: 3px;
-
-    background:
-        linear-gradient(
-            90deg,
-            #915be0,
-            #28bce5,
-            #78dc4e
-        );
-}
-
-.scale-labels,
-.scale-orders {
-
-    display: flex;
-
-    justify-content: space-between;
-}
-
-.scale-labels {
-
-    color: #d5e5fa;
-
-    font-size: 11px;
-
-    margin-top: 7px;
-}
-
-.scale-orders {
-
-    color: #9bb2cf;
-
-    font-family: Georgia, serif;
-
-    font-size: 11px;
-}
-
-
-/* =========================
-   CONTENT SECTIONS
-========================= */
+/* ==========================================================
+   GENERAL SECTIONS
+========================================================== */
 
 .section {
-    padding: 60px 0;
+    padding: 75px 0;
 }
 
-.section-soft {
-    background: #f8fafc;
+.soft-section {
+    background: #f3f5f7;
 }
 
-.section-title {
+.eyebrow {
+    color: #16477f;
 
-    color: #0d3d7a;
-
-    font-size: 13px;
-
-    font-weight: 800;
+    text-transform: uppercase;
 
     letter-spacing: 2px;
 
-    text-transform: uppercase;
+    font-size: 11px;
+
+    font-weight: 800;
+
+    margin-bottom: 8px;
 }
 
-.section-title::after {
-
+.eyebrow::after {
     content: "";
 
     display: block;
 
-    width: 38px;
+    width: 35px;
     height: 2px;
 
-    background: #e2a52c;
+    background: #d9a134;
 
     margin-top: 8px;
 }
 
+.eyebrow.light {
+    color: #d8e7fa;
+}
+
+.section-heading,
 .section h2 {
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
 
-    font-family: Georgia, serif;
+    color: #13263e;
 
-    color: #132743;
+    font-size:
+        clamp(27px, 3vw, 34px);
 
-    font-size: 28px;
+    font-weight: 500;
 
-    margin: 8px 0 20px;
+    line-height: 1.25;
 }
 
 
-/* =========================
+/* ==========================================================
    ABOUT
-========================= */
+========================================================== */
 
-.about-grid {
-
+.about-layout {
     display: grid;
 
     grid-template-columns:
-        1.15fr
-        240px;
+        1fr 230px;
 
-    gap: 55px;
+    gap: 65px;
 
     align-items: center;
 }
 
-.about-text {
-
-    max-width: 670px;
-
-    font-size: 14.5px;
+.about-content {
+    max-width: 690px;
 }
 
-.about-text a {
+.about-content p {
+    color: #46566b;
 
-    color: #10498f;
+    font-size: 15px;
+}
+
+.about-content a {
+    color: #174d8e;
 
     font-weight: 700;
 }
 
-.about-text a:hover {
+.about-content a:hover {
     text-decoration: underline;
 }
 
-
-/* portrait */
+.portrait-wrapper {
+    display: flex;
+    justify-content: center;
+}
 
 .portrait {
-
-    width: 220px;
-
-    height: 275px;
-
-    border-radius: 14px;
+    width: 205px;
+    height: 255px;
 
     object-fit: cover;
 
     object-position: center 42%;
 
+    border-radius: 12px;
+
     box-shadow:
-        0 10px 30px rgba(15,36,67,.13);
+        0 12px 30px
+        rgba(27,42,62,.13);
 }
 
 
-/* =========================
-   RESEARCH
-========================= */
+/* ==========================================================
+   CURRENT / PREVIOUS RESEARCH
+========================================================== */
 
-.cards {
+.research-section {
+    background: #f4f6f8;
+}
 
+.previous-section {
+    background: #fbfaf7;
+}
+
+.research-layout {
     display: grid;
 
     grid-template-columns:
-        repeat(3,1fr);
+        100px 1fr;
 
-    gap: 18px;
-
-    margin-top: 27px;
+    gap: 35px;
 }
 
-.card {
+.research-number {
+    color: #dba139;
 
-    padding: 25px 22px;
+    font-family:
+        Georgia,
+        serif;
 
-    background: white;
+    font-size: 47px;
+
+    line-height: 1;
+}
+
+.research-number.muted {
+    color: #a8b2bf;
+}
+
+.research-content {
+    max-width: 820px;
+}
+
+.research-content p {
+    color: #4c596a;
+}
+
+.research-tags {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin-top: 22px;
+}
+
+.research-tags span {
+    padding: 5px 10px;
 
     border:
-        1px solid #e4e9f1;
+        1px solid #dce2e9;
 
-    border-radius: 11px;
+    border-radius: 30px;
 
-    box-shadow:
-        0 7px 23px rgba(20,46,80,.05);
+    background: #ffffff;
 
+    color: #35516e;
+
+    font-size: 11px;
+}
+
+.future-link {
+    margin-top: 22px;
+
+    color: #8893a0;
+
+    font-size: 12px;
+
+    font-style: italic;
+}
+
+
+/* ==========================================================
+   APPROACH PATHWAY
+========================================================== */
+
+.approach-section {
+    background: #ffffff;
+}
+
+.approach-path {
+    display: grid;
+
+    grid-template-columns:
+        1fr 60px 1fr 60px 1fr;
+
+    align-items: center;
+
+    margin-top: 42px;
+}
+
+.approach-step {
     text-align: center;
 }
 
-.card-icon {
+.step-number {
+    color: #9aa6b4;
 
-    width: 48px;
-    height: 48px;
+    font-family:
+        Georgia,
+        serif;
+
+    font-size: 13px;
+
+    margin-bottom: 13px;
+}
+
+.step-symbol {
+    width: 52px;
+    height: 52px;
 
     margin:
         0 auto 15px;
@@ -612,259 +770,596 @@ a {
     align-items: center;
     justify-content: center;
 
+    border:
+        1px solid #d9e0e8;
+
     border-radius: 50%;
 
-    background: #eaf1ff;
+    color: #16477f;
 
-    color: #103e80;
+    font-family:
+        Georgia,
+        serif;
 
-    font-family: Georgia, serif;
+    font-size: 22px;
 
-    font-size: 21px;
+    background: #f8fafc;
 }
 
-.card h3 {
+.approach-step h3 {
+    color: #17314e;
 
-    color: #142c50;
+    font-size: 16px;
 
-    font-size: 15px;
+    margin-bottom: 12px;
 }
 
-.card p {
+.approach-step p {
+    margin: 4px 0;
 
-    color: #586579;
+    color: #667386;
 
-    font-size: 13px;
+    font-size: 12.5px;
+}
+
+.path-arrow {
+    color: #a7b0bc;
+
+    font-size: 25px;
+
+    text-align: center;
 }
 
 
-/* =========================
-   FACTS
-========================= */
+/* ==========================================================
+   PUBLICATIONS
+========================================================== */
 
-.facts {
-
+.publication {
     display: grid;
 
     grid-template-columns:
-        repeat(4,1fr);
+        85px 1fr;
 
-    margin-top: 38px;
+    gap: 30px;
 
-    background: white;
-
-    border:
-        1px solid #e5e9ef;
-
-    border-radius: 11px;
-}
-
-.fact {
-
-    padding: 18px;
-
-    border-right:
-        1px solid #e7ebf1;
-}
-
-.fact:last-child {
-    border-right: none;
-}
-
-.fact strong {
-
-    display: block;
-
-    color: #123f7a;
-
-    font-size: 13px;
-
-    margin-bottom: 4px;
-}
-
-.fact span {
-
-    color: #586579;
-
-    font-size: 12px;
-}
-
-
-/* =========================
-   OTHER CONTENT
-========================= */
-
-.entry {
-
-    padding: 17px 0;
+    padding: 29px 0;
 
     border-bottom:
-        1px solid #e7ebef;
+        1px solid #e0e4e8;
 }
 
-.entry-title {
+.publication-year {
+    color: #bf8930;
 
-    color: #153f74;
+    font-family:
+        Georgia,
+        serif;
 
-    font-size: 15px;
+    font-size: 20px;
+}
+
+.publication-body h3 {
+    margin:
+        0 0 8px;
+
+    color: #183a63;
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size: 18px;
+
+    line-height: 1.4;
+}
+
+.publication-authors,
+.publication-journal {
+    margin: 5px 0;
+
+    color: #5b6878;
+
+    font-size: 13.5px;
+}
+
+.text-link {
+    display: inline-block;
+
+    margin-top: 9px;
+
+    color: #174d8e;
+
+    font-size: 12px;
 
     font-weight: 700;
 }
 
-.entry-meta {
+.text-link i {
+    margin-left: 4px;
+}
 
-    color: #69778b;
+
+/* ==========================================================
+   TEACHING
+========================================================== */
+
+.simple-grid {
+    display: grid;
+
+    grid-template-columns:
+        .8fr 1.2fr;
+
+    gap: 60px;
+
+    margin-top: 30px;
+}
+
+.simple-grid h3 {
+    color: #183a63;
+}
+
+.meta {
+    color: #8a94a0;
+}
+
+.detail-list p {
+    padding:
+        7px 0;
+
+    margin: 0;
+
+    border-bottom:
+        1px solid #e1e5e9;
+
+    color: #516074;
+
+    font-size: 13.5px;
+}
+
+
+/* ==========================================================
+   TALKS
+========================================================== */
+
+.timeline {
+    margin-top: 32px;
+}
+
+.timeline-item {
+    display: grid;
+
+    grid-template-columns:
+        80px 1fr;
+
+    gap: 25px;
+
+    padding: 18px 0;
+
+    border-bottom:
+        1px solid #e1e5e8;
+}
+
+.timeline-year {
+    color: #c48e32;
+
+    font-family:
+        Georgia,
+        serif;
+}
+
+.timeline-item strong {
+    color: #1a3d68;
+}
+
+.timeline-item p {
+    margin-top: 6px;
+
+    color: #657286;
 
     font-size: 13px;
-
-    margin-top: 4px;
 }
 
 
-/* =========================
-   PROFILE / FOOTER
-========================= */
+/* ==========================================================
+   SERVICE
+========================================================== */
 
-.contact-box {
+.service-grid {
+    display: grid;
 
-    padding: 32px;
+    grid-template-columns:
+        repeat(3, 1fr);
 
-    border-radius: 12px;
+    gap: 25px;
 
-    color: white;
+    margin-top: 35px;
+}
 
+.service-item {
+    border-top:
+        2px solid #d6a13a;
+
+    padding-top: 18px;
+}
+
+.service-year {
+    color: #8995a3;
+
+    font-size: 11px;
+}
+
+.service-item h3 {
+    color: #17375d;
+}
+
+.service-item p {
+    color: #637083;
+
+    font-size: 13px;
+}
+
+
+/* ==========================================================
+   PROFILE / CV
+========================================================== */
+
+.profile-section {
     background:
         linear-gradient(
-            135deg,
-            #071b47,
-            #0a4165
+            120deg,
+            #05152f,
+            #08395b
         );
-}
 
-.contact-box h2 {
     color: white;
 }
 
+.profile-box {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+.profile-box h2 {
+    color: white;
+}
+
+.profile-box p {
+    color: #d1deed;
+}
+
+.profile-actions {
+    display: flex;
+
+    gap: 10px;
+}
+
+
+/* ==========================================================
+   FOOTER
+========================================================== */
+
 footer {
+    background: #020d20;
 
-    background: #03132d;
+    color: #96a6ba;
 
-    color: #aebbd0;
+    padding: 20px 0;
 
-    text-align: center;
+    font-size: 11px;
+}
 
-    padding: 22px 0;
+.footer-content {
+    display: flex;
 
-    font-size: 12px;
+    justify-content: space-between;
+
+    gap: 20px;
 }
 
 
-/* =========================
-   RESPONSIVE
-========================= */
+/* ==========================================================
+   TABLET
+========================================================== */
 
-@media(max-width:1000px) {
-
-    .hero-content {
-
-        grid-template-columns:
-            .75fr 1.25fr;
-    }
-
-    .science-panel {
-        display: none;
-    }
-
-}
-
-@media(max-width:760px) {
+@media (max-width: 1000px) {
 
     .nav-links {
-        display: none;
+        gap: 14px;
     }
 
-    .hero-content {
+    .hero-grid {
+        grid-template-columns:
+            .72fr 1.28fr;
 
-        grid-template-columns: 1fr;
-
-        min-height: auto;
-
-        padding:
-            110px 0 50px;
+        gap: 30px;
     }
 
-    .math-panel {
-        display: none;
+    .physiology-visual {
+        grid-column:
+            1 / -1;
+
+        max-width: 480px;
+
+        margin:
+            -15px auto 35px;
     }
 
     .hero {
-
         min-height: auto;
     }
 
-    .hero-main h1 {
+    .hero-grid {
+        min-height: auto;
 
-        font-size: 45px;
+        padding-bottom: 25px;
     }
 
-    .about-grid {
+}
 
+
+/* ==========================================================
+   MOBILE
+========================================================== */
+
+@media (max-width: 760px) {
+
+    .container {
+        width: 88%;
+    }
+
+
+    /* navigation remains accessible */
+
+    .nav-container {
+        display: block;
+
+        padding: 12px 0;
+    }
+
+    .brand {
+        display: block;
+
+        margin-bottom: 8px;
+
+        font-size: 19px;
+    }
+
+    .nav-links {
+        display: flex;
+
+        overflow-x: auto;
+
+        white-space: nowrap;
+
+        padding-bottom: 4px;
+
+        gap: 15px;
+    }
+
+    .nav-links::-webkit-scrollbar {
+        display: none;
+    }
+
+
+    /* hero */
+
+    .hero-grid {
+        width: 88%;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        padding:
+            120px 0 45px;
+
+        gap: 25px;
+    }
+
+
+    /* IMPORTANT:
+       we no longer hide mathematics
+       or physiology on mobile */
+
+    .math-visual {
+        order: 1;
+
+        width: 100%;
+
+        text-align: center;
+    }
+
+    .math-expression {
+        font-size: 15px;
+    }
+
+    .small-equation {
+        font-size: 14px;
+    }
+
+    .multiscale-plot {
+        max-width: 230px;
+
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+    .hero-main {
+        order: 2;
+
+        text-align: center;
+    }
+
+    .hero-main h1 {
+        font-size: 43px;
+    }
+
+    .gold-line {
+        margin:
+            16px auto;
+    }
+
+    .hero-text {
+        margin:
+            auto;
+
+        font-size: 14px;
+    }
+
+    .profile-links {
+        justify-content: center;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+
+    .physiology-visual {
+        order: 3;
+
+        width: 100%;
+
+        margin: 0;
+
+        padding-top: 12px;
+    }
+
+    .visual-label {
+        text-align: center;
+    }
+
+    .physiology-model {
+        max-width: 330px;
+    }
+
+    .model-node {
+        min-width: 86px;
+
+        font-size: 9.5px;
+
+        padding: 7px;
+    }
+
+    .model-node.small {
+        min-width: 55px;
+    }
+
+    .model-middle {
+        gap: 5px;
+    }
+
+    .model-arrow {
+        font-size: 14px;
+    }
+
+
+    /* sections */
+
+    .section {
+        padding:
+            55px 0;
+    }
+
+    .about-layout {
         grid-template-columns: 1fr;
+
+        gap: 35px;
+    }
+
+    .portrait-wrapper {
+        justify-content: flex-start;
     }
 
     .portrait {
-
-        width: 190px;
-
-        height: 235px;
+        width: 170px;
+        height: 210px;
     }
 
-    .cards,
-    .facts {
 
+    .research-layout {
         grid-template-columns: 1fr;
     }
 
-    .fact {
-
-        border-right: none;
-
-        border-bottom:
-            1px solid #e7ebf1;
+    .research-number {
+        font-size: 35px;
     }
 
-}
-/* =========================
-   PUBLICATION LINKS
-========================= */
 
-.publication-links {
-    margin-top: 10px;
-}
+    /* approach pathway stacks */
 
-.publication-links a {
-    display: inline-block;
-    padding: 6px 12px;
-    margin-right: 8px;
+    .approach-path {
+        grid-template-columns: 1fr;
 
-    border: 1px solid #d7e0ec;
-    border-radius: 5px;
+        gap: 18px;
+    }
 
-    background: #f7f9fc;
-    color: #10498f;
+    .path-arrow {
+        transform: rotate(90deg);
+    }
 
-    font-size: 11px;
-    font-weight: 600;
 
-    transition: 0.2s;
-}
+    /* publication */
 
-.publication-links a:hover {
-    background: #10498f;
-    color: white;
-    border-color: #10498f;
-}
+    .publication {
+        grid-template-columns: 1fr;
 
-.publication-links i {
-    margin-right: 4px;
+        gap: 5px;
+    }
+
+    .publication-year {
+        font-size: 17px;
+    }
+
+
+    .simple-grid {
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+    }
+
+
+    .timeline-item {
+        grid-template-columns:
+            55px 1fr;
+
+        gap: 15px;
+    }
+
+
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .profile-box {
+        display: block;
+    }
+
+    .profile-actions {
+        margin-top: 25px;
+
+        flex-wrap: wrap;
+    }
+
+
+    .footer-content {
+        display: block;
+    }
+
+    .footer-content span {
+        display: block;
+
+        margin-bottom: 5px;
+    }
+
 }
