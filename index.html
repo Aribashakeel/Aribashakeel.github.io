@@ -2,53 +2,66 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
 
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
 
     <meta name="description"
-          content="Ariba Shakeel is a PhD researcher in Applied Mathematics at the University of Birmingham, working in mathematical biology, mathematical modelling and applied differential equations.">
+          content="Ariba Shakeel is a PhD researcher in Applied Mathematics at the University of Birmingham. Her research spans mathematical biology, physiological modelling, asymptotic analysis and fluid dynamics.">
 
     <meta name="author"
           content="Ariba Shakeel">
 
-    <title>Ariba Shakeel | Applied Mathematics</title>
+    <title>
+        Ariba Shakeel | Applied Mathematics
+    </title>
 
+    <!-- Font Awesome -->
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
+    <!-- Main stylesheet -->
     <link rel="stylesheet"
           href="style.css">
+
 </head>
 
 
-<body class="home-page">
+<body>
+
+
+<!-- =========================================================
+     NAVIGATION
+========================================================= -->
 
 <nav class="navbar">
 
     <div class="nav-container">
 
-        <a href="index.html"
+        <a href="#home"
            class="brand">
             Ariba Shakeel
         </a>
 
         <div class="nav-links">
 
-            <a href="research.html">Research</a>
+            <a href="#about">About</a>
 
-            <a href="publications.html">Publications</a>
+            <a href="#research">Research</a>
 
-            <a href="teaching.html">Teaching</a>
+            <a href="#publications">Publications</a>
 
-            <a href="talks.html">Talks</a>
+            <a href="#teaching">Teaching</a>
 
-            <a href="awards.html">Awards</a>
+            <a href="#talks">Talks</a>
 
-            <a href="service.html">Service &amp; Outreach</a>
+            <a href="#awards">Awards</a>
 
-            <a href="#profile">CV</a>
+            <a href="#service">Service &amp; Outreach</a>
+
+            <a href="#cv">CV</a>
 
         </div>
 
@@ -57,168 +70,376 @@
 </nav>
 
 
-<main class="home-hero">
 
-    <!-- General mathematics decoration -->
+<!-- =========================================================
+     HERO
+========================================================= -->
 
-    <div class="math-decoration math-left">
+<header class="hero"
+        id="home">
 
-        <span>∂u/∂t</span>
 
-        <span>ε ≪ 1</span>
+    <!-- MATHEMATICAL BACKGROUND -->
 
-        <span>∫ f(x) dx</span>
+    <div class="math-background">
+
+
+        <!-- ASYMPTOTICS -->
+
+        <div class="math-text asymptotic-text">
+
+            <span>
+                0 &lt; ε ≪ 1
+            </span>
+
+            <span>
+                t₀ = t
+            </span>
+
+            <span>
+                t₁ = εt
+            </span>
+
+            <span>
+                t₂ = ε²t
+            </span>
+
+        </div>
+
+
+        <!-- DIFFERENTIAL EQUATIONS -->
+
+        <div class="math-text equation-text">
+
+            <span>
+                ε du/dt = f(u,v)
+            </span>
+
+            <span>
+                dv/dt = g(u,v)
+            </span>
+
+        </div>
+
+
+
+        <!-- BOUNDARY LAYER / ASYMPTOTIC CURVE -->
+
+        <svg class="hero-curve"
+             viewBox="0 0 480 230"
+             xmlns="http://www.w3.org/2000/svg">
+
+            <line x1="35"
+                  y1="190"
+                  x2="450"
+                  y2="190"
+                  class="soft-line"/>
+
+            <line x1="35"
+                  y1="190"
+                  x2="35"
+                  y2="30"
+                  class="soft-line"/>
+
+            <line x1="105"
+                  y1="40"
+                  x2="105"
+                  y2="190"
+                  class="dash-line"/>
+
+            <line x1="215"
+                  y1="40"
+                  x2="215"
+                  y2="190"
+                  class="dash-line"/>
+
+            <line x1="325"
+                  y1="40"
+                  x2="325"
+                  y2="190"
+                  class="dash-line"/>
+
+            <path
+                d="
+                M40 175
+                C63 78,86 42,120 67
+                C161 99,163 148,215 153
+                C263 158,288 132,330 143
+                C373 153,410 156,445 152
+                "
+                class="soft-curve"/>
+
+        </svg>
+
+
+
+        <!-- ABSTRACT PHASE TRAJECTORIES -->
+
+        <svg class="phase-graphic"
+             viewBox="0 0 500 500"
+             xmlns="http://www.w3.org/2000/svg">
+
+            <ellipse cx="250"
+                     cy="250"
+                     rx="190"
+                     ry="76"
+                     class="orbit"/>
+
+            <ellipse cx="250"
+                     cy="250"
+                     rx="145"
+                     ry="205"
+                     transform="rotate(49 250 250)"
+                     class="orbit"/>
+
+            <ellipse cx="250"
+                     cy="250"
+                     rx="80"
+                     ry="170"
+                     transform="rotate(-41 250 250)"
+                     class="orbit"/>
+
+        </svg>
+
+
+
+        <!-- MATHEMATICAL BIOLOGY NETWORK -->
+
+        <svg class="network-graphic"
+             viewBox="0 0 400 300"
+             xmlns="http://www.w3.org/2000/svg">
+
+            <line x1="75"
+                  y1="145"
+                  x2="155"
+                  y2="85"
+                  class="network-line"/>
+
+            <line x1="155"
+                  y1="85"
+                  x2="235"
+                  y2="130"
+                  class="network-line"/>
+
+            <line x1="235"
+                  y1="130"
+                  x2="315"
+                  y2="78"
+                  class="network-line"/>
+
+            <line x1="235"
+                  y1="130"
+                  x2="285"
+                  y2="220"
+                  class="network-line"/>
+
+            <line x1="155"
+                  y1="85"
+                  x2="145"
+                  y2="225"
+                  class="network-line"/>
+
+
+            <circle cx="75"
+                    cy="145"
+                    r="6"
+                    class="network-node"/>
+
+            <circle cx="155"
+                    cy="85"
+                    r="7"
+                    class="network-node"/>
+
+            <circle cx="235"
+                    cy="130"
+                    r="7"
+                    class="network-node"/>
+
+            <circle cx="315"
+                    cy="78"
+                    r="5"
+                    class="network-node"/>
+
+            <circle cx="285"
+                    cy="220"
+                    r="6"
+                    class="network-node"/>
+
+            <circle cx="145"
+                    cy="225"
+                    r="5"
+                    class="network-node"/>
+
+        </svg>
+
 
     </div>
 
 
-    <div class="math-orbit orbit-one"></div>
-    <div class="math-orbit orbit-two"></div>
 
+    <!-- MAIN HERO CONTENT -->
 
-    <div class="home-content">
+    <div class="hero-content">
 
-        <div class="home-kicker">
+        <div class="hero-kicker">
+
             PhD Researcher in Applied Mathematics
+
         </div>
+
 
         <h1>
             Ariba Shakeel
         </h1>
 
-        <div class="home-line"></div>
 
-        <p class="home-affiliation">
+        <div class="gold-line"></div>
+
+
+        <div class="hero-affiliation">
 
             School of Mathematics
             <br>
 
-            University of Birmingham, United Kingdom
-
-        </p>
-
-        <p class="home-description">
-
-            My research lies at the intersection of
-            applied mathematics, mathematical biology
-            and physiological modelling.
-
-        </p>
-
-
-        <div class="home-buttons">
-
-            <a href="research.html"
-               class="button primary-button">
-                Explore Research
-            </a>
-
-            <a href="publications.html"
-               class="button">
-                Publications
-            </a>
+            University of Birmingham,
+            United Kingdom
 
         </div>
 
 
-        <div class="home-profile-links">
+        <p class="hero-description">
+
+            Mathematical modelling and analysis
+            across biological, physiological and
+            physical systems.
+
+        </p>
+
+
+
+        <!-- PROFESSIONAL PROFILES -->
+
+        <div class="profile-links">
+
+
+            <!-- REPLACE # WITH YOUR REAL GOOGLE SCHOLAR LINK -->
+
+            <a href="#"
+               target="_blank"
+               rel="noopener noreferrer">
+
+                <i class="fa-solid fa-graduation-cap"></i>
+
+                Google Scholar
+
+            </a>
+
+
 
             <a href="https://orcid.org/0009-0005-8796-5896"
                target="_blank"
                rel="noopener noreferrer">
 
                 <i class="fa-brands fa-orcid"></i>
+
                 ORCID
 
             </a>
 
-        </div>
-
-    </div>
 
 
-    <div class="home-scroll">
+            <!-- REPLACE # WITH YOUR REAL RESEARCHGATE LINK -->
 
-        Explore
+            <a href="#"
+               target="_blank"
+               rel="noopener noreferrer">
 
-        <span>↓</span>
+                <i class="fa-brands fa-researchgate"></i>
 
-    </div>
+                ResearchGate
 
-</main>
+            </a>
 
 
-<section class="intro-strip">
 
-    <div class="container">
+            <!-- REPLACE # WITH YOUR REAL LINKEDIN LINK -->
 
-        <div class="intro-grid">
+            <a href="#"
+               target="_blank"
+               rel="noopener noreferrer">
 
-            <div>
+                <i class="fa-brands fa-linkedin"></i>
 
-                <span class="mini-label">
-                    Current
-                </span>
+                LinkedIn
 
-                <strong>
-                    Mathematical Biology &amp;
-                    Physiological Modelling
-                </strong>
+            </a>
 
-            </div>
 
-            <div>
 
-                <span class="mini-label">
-                    Methods
-                </span>
+            <a href="#cv">
 
-                <strong>
-                    Modelling · Asymptotics · Computation
-                </strong>
+                <i class="fa-regular fa-file-lines"></i>
 
-            </div>
+                CV
 
-            <div>
+            </a>
 
-                <span class="mini-label">
-                    Previous
-                </span>
-
-                <strong>
-                    Fluid Dynamics &amp; Boundary-Layer Theory
-                </strong>
-
-            </div>
 
         </div>
 
+
     </div>
 
-</section>
+
+    <a href="#about"
+       class="scroll-down">
+
+        <span>
+            Explore
+        </span>
+
+        ↓
+
+    </a>
 
 
-<section class="section home-about">
+</header>
+
+
+
+<!-- =========================================================
+     ABOUT
+========================================================= -->
+
+<section class="section"
+         id="about">
 
     <div class="container">
+
 
         <div class="about-layout">
 
-            <div>
+
+            <div class="about-content">
 
                 <div class="eyebrow">
                     About
                 </div>
 
+
                 <h2>
+
                     Applied mathematics across
                     biological and physical systems
+
                 </h2>
+
 
                 <p>
 
                     I am a PhD researcher in Applied Mathematics
-                    at the University of Birmingham, supervised by
+                    at the University of Birmingham, working under
+                    the supervision of
 
                     <a href="https://www.birmingham.ac.uk/staff/profiles/maths/gallagher-meurig"
                        target="_blank"
@@ -240,24 +461,23 @@
 
                 </p>
 
+
                 <p>
 
-                    My current research develops mathematical
-                    modelling approaches for understanding
-                    cortisol replacement therapy in adrenal
-                    insufficiency.
+                    My research interests span mathematical biology,
+                    mathematical modelling, applied differential
+                    equations, asymptotic analysis and scientific
+                    computation.
+
+                    My current work focuses on physiological modelling,
+                    while my previous research was in fluid dynamics
+                    and boundary-layer theory.
 
                 </p>
 
-                <a href="research.html"
-                   class="editorial-link">
-
-                    Read about my research
-                    <span>→</span>
-
-                </a>
 
             </div>
+
 
 
             <div class="portrait-wrapper">
@@ -268,81 +488,1226 @@
 
             </div>
 
+
         </div>
+
 
     </div>
 
 </section>
 
 
-<section class="profile-section"
-         id="profile">
+
+<!-- =========================================================
+     RESEARCH
+========================================================= -->
+
+<section class="section soft-section"
+         id="research">
 
     <div class="container">
 
-        <div class="profile-box">
+
+        <div class="eyebrow">
+            Research
+        </div>
+
+
+        <h2 class="section-title">
+
+            Current &amp; Previous Research
+
+        </h2>
+
+
+
+        <!-- CURRENT RESEARCH -->
+
+        <div class="research-feature">
+
+
+            <div class="research-index">
+
+                01
+
+            </div>
+
+
+            <div class="research-body">
+
+
+                <span class="research-status">
+
+                    Current Research
+
+                </span>
+
+
+                <h3>
+
+                    Mathematical Modelling to Understand
+                    the Treatment of Adrenal Insufficiency
+
+                </h3>
+
+
+                <p>
+
+                    My PhD research develops a mathematical
+                    modelling toolkit to investigate cortisol
+                    replacement therapy in adrenal insufficiency.
+
+                    The models incorporate physiological mechanisms
+                    including cortisol–protein binding,
+                    cortisol–cortisone interconversion,
+                    tissue distribution and cortisol excretion.
+
+                </p>
+
+
+                <p>
+
+                    The aim is to investigate different dosing
+                    strategies and understand the mechanisms
+                    underlying cortisol dynamics and
+                    inter-patient variability.
+
+                </p>
+
+
+                <div class="research-tags">
+
+                    <span>
+                        Mathematical Biology
+                    </span>
+
+                    <span>
+                        Mechanistic ODEs
+                    </span>
+
+                    <span>
+                        Multiple Time Scales
+                    </span>
+
+                    <span>
+                        Physiological Modelling
+                    </span>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- METHODS -->
+
+        <div class="methods-section">
+
+
+            <div class="methods-heading">
+
+                Methods
+
+            </div>
+
+
+            <div class="methods-grid">
+
+
+                <div>
+
+                    <h4>
+                        Mathematical Analysis
+                    </h4>
+
+                    <p>
+                        Ordinary differential equations
+                    </p>
+
+                    <p>
+                        Asymptotic analysis
+                    </p>
+
+                    <p>
+                        Perturbation methods
+                    </p>
+
+                    <p>
+                        Multiple-time-scale analysis
+                    </p>
+
+                    <p>
+                        Matched asymptotic analysis
+                    </p>
+
+                </div>
+
+
+                <div>
+
+                    <h4>
+                        Computational Analysis
+                    </h4>
+
+                    <p>
+                        Numerical simulation
+                    </p>
+
+                    <p>
+                        Parameter estimation
+                    </p>
+
+                    <p>
+                        Optimisation
+                    </p>
+
+                    <p>
+                        Sensitivity analysis
+                    </p>
+
+                    <p>
+                        Structural &amp; practical identifiability
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- PREVIOUS RESEARCH -->
+
+        <div class="research-feature previous-research">
+
+
+            <div class="research-index muted-index">
+
+                02
+
+            </div>
+
+
+            <div class="research-body">
+
+
+                <span class="research-status previous-status">
+
+                    Previous Research
+
+                </span>
+
+
+                <h3>
+
+                    Fluid Dynamics &amp;
+                    Boundary-Layer Theory
+
+                </h3>
+
+
+                <p>
+
+                    My previous research focused on rotating flow,
+                    boundary-layer theory and computational fluid
+                    mechanics.
+
+                    My MSc dissertation investigated rotating flows
+                    over a stationary plane surface.
+
+                </p>
+
+
+                <p>
+
+                    I subsequently worked as a Research Assistant
+                    on mathematical and numerical modelling of
+                    MHD boundary-layer flow with variable
+                    fluid properties.
+
+                </p>
+
+
+                <div class="research-tags">
+
+                    <span>
+                        Fluid Dynamics
+                    </span>
+
+                    <span>
+                        Boundary Layers
+                    </span>
+
+                    <span>
+                        Rotating Flow
+                    </span>
+
+                    <span>
+                        Computational Fluid Mechanics
+                    </span>
+
+                </div>
+
+
+                <div class="future-note">
+
+                    MSc thesis link can be added here
+                    when an online version is available.
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     PUBLICATIONS
+========================================================= -->
+
+<section class="section"
+         id="publications">
+
+    <div class="container">
+
+
+        <div class="eyebrow">
+            Publications
+        </div>
+
+
+        <h2 class="section-title">
+
+            Journal Publications
+
+        </h2>
+
+
+
+        <!-- 2025 -->
+
+        <article class="publication">
+
+
+            <div class="publication-year">
+
+                2025
+
+            </div>
+
+
+            <div class="publication-content">
+
+
+                <h3>
+
+                    Exploration of variable fluid properties
+                    in a pressure gradient driven generalized
+                    vortex flow dynamics using numerical approach
+
+                </h3>
+
+
+                <p>
+
+                    <strong>
+                        Ariba Shakeel
+                    </strong>,
+                    Meraj Mustafa and Kohilavani Naganthran
+
+                </p>
+
+
+                <p class="publication-journal">
+
+                    <em>
+                        Modern Physics Letters B
+                    </em>,
+                    Article 2550136
+
+                </p>
+
+
+                <a href="https://doi.org/10.1142/S0217984925501362"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="editorial-link">
+
+                    DOI
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                </a>
+
+
+            </div>
+
+
+        </article>
+
+
+
+        <!-- 2023 -->
+
+        <article class="publication">
+
+
+            <div class="publication-year">
+
+                2023
+
+            </div>
+
+
+            <div class="publication-content">
+
+
+                <h3>
+
+                    Assessment of Bödewadt flow over a
+                    stretchable porous surface with variable
+                    physical properties:
+                    A comparative study
+
+                </h3>
+
+
+                <p>
+
+                    <strong>
+                        Ariba Shakeel
+                    </strong>
+                    and M. Mustafa
+
+                </p>
+
+
+                <p class="publication-journal">
+
+                    <em>
+                        Numerical Heat Transfer,
+                        Part B: Fundamentals
+                    </em>,
+                    pp. 1–14
+
+                </p>
+
+
+                <a href="https://doi.org/10.1080/10407790.2023.2274452"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="editorial-link">
+
+                    DOI
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                </a>
+
+
+            </div>
+
+
+        </article>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     TEACHING
+========================================================= -->
+
+<section class="section soft-section"
+         id="teaching">
+
+    <div class="container">
+
+
+        <div class="eyebrow">
+            Teaching
+        </div>
+
+
+        <h2 class="section-title">
+
+            Mathematics Teaching
+
+        </h2>
+
+
+        <div class="position-row">
+
 
             <div>
 
-                <span class="profile-small">
-                    Academic profile
-                </span>
+                <h3>
 
-                <h2>
-                    Ariba Shakeel
-                </h2>
+                    Postgraduate Teaching Assistant (PGTA)
+
+                </h3>
 
                 <p>
-                    School of Mathematics
-                    <br>
+
                     University of Birmingham
+
                 </p>
 
             </div>
 
-            <div class="profile-buttons">
 
-                <!-- Connect your CV here after uploading it -->
+            <span>
 
-                <a href="#"
-                   class="button primary-button">
+                October 2024–Present
 
-                    Download CV
+            </span>
+
+
+        </div>
+
+
+        <div class="teaching-list">
+
+
+            <p>
+
+                Demonstrate and support undergraduate
+                and postgraduate mathematics classes.
+
+            </p>
+
+
+            <p>
+
+                Mark assignments and examination scripts.
+
+            </p>
+
+
+            <p>
+
+                Support computer-based mathematics sessions
+                using MATLAB and LaTeX.
+
+            </p>
+
+
+            <p>
+
+                Undertake examination invigilation.
+
+            </p>
+
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     TALKS & PRESENTATIONS
+========================================================= -->
+
+<section class="section"
+         id="talks">
+
+    <div class="container">
+
+
+        <div class="eyebrow">
+
+            Talks &amp; Presentations
+
+        </div>
+
+
+        <h2 class="section-title">
+
+            Oral Presentations
+
+        </h2>
+
+
+
+        <div class="presentation-list">
+
+
+            <div class="presentation">
+
+                <span>
+                    2026
+                </span>
+
+                <div>
+
+                    <h3>
+
+                        Mathematical Modelling to Understand
+                        the Treatment of Adrenal Insufficiency
+
+                    </h3>
+
+                    <p>
+
+                        Applied Mathematics Postgraduate Conference,
+                        University of Warwick,
+                        Coventry, UK.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="presentation">
+
+                <span>
+                    2026
+                </span>
+
+                <div>
+
+                    <h3>
+
+                        3-minute thesis talk:
+                        Mathematical Modelling to Understand
+                        the Treatment of Adrenal Insufficiency
+
+                    </h3>
+
+                    <p>
+
+                        British Early career Mathematician Colloquium,
+                        University of Birmingham, UK.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="presentation">
+
+                <span>
+                    2026
+                </span>
+
+                <div>
+
+                    <h3>
+
+                        Mathematical Modelling to Understand
+                        the Treatment of Adrenal Insufficiency:
+                        Exploring Continuous Intravenous Infusion
+
+                    </h3>
+
+                    <p>
+
+                        Lunchtime Applied Mathematics Seminar (LAMS),
+                        University of Birmingham, UK.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="presentation">
+
+                <span>
+                    2025
+                </span>
+
+                <div>
+
+                    <h3>
+
+                        Mathematical Modelling:
+                        Cortisol infusion protocols to understand
+                        the treatment of Adrenal insufficiency
+
+                    </h3>
+
+                    <p>
+
+                        British Early career Mathematician Colloquium,
+                        University of Birmingham, UK.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="presentation">
+
+                <span>
+                    2025
+                </span>
+
+                <div>
+
+                    <h3>
+
+                        Numerical and Asymptotic Analysis of
+                        Cortisol-Protein Binding Model:
+                        Exploring saturating case
+
+                    </h3>
+
+                    <p>
+
+                        Mathematical and Computational Biology
+                        Seminar Series,
+                        University of Birmingham, UK.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="presentation">
+
+                <span>
+                    2025
+                </span>
+
+                <div>
+
+                    <h3>
+
+                        Numerical and Asymptotic Analysis of
+                        Cortisol-Protein Binding Model:
+                        Exploring Non-saturating Dynamics
+
+                    </h3>
+
+                    <p>
+
+                        Lunchtime Applied Mathematics Seminar (LAMS),
+                        University of Birmingham, UK.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- POSTERS -->
+
+        <h2 class="subsection-title">
+
+            Poster Presentations
+
+        </h2>
+
+
+        <div class="presentation-list">
+
+
+            <div class="presentation">
+
+                <span>
+                    2025
+                </span>
+
+                <div>
+
+                    <h3>
+
+                        Mathematical Modelling:
+                        Cortisol infusion protocols to understand
+                        the treatment of Adrenal insufficiency
+
+                    </h3>
+
+                    <p>
+
+                        Women and Non-binary Doctoral Researchers
+                        in STEM (WoNDRS) Conference,
+                        University of Liverpool,
+                        Liverpool, UK.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="presentation">
+
+                <span>
+                    2025
+                </span>
+
+                <div>
+
+                    <h3>
+
+                        Numerical and Asymptotic Analysis
+                        of Cortisol infusion protocols for
+                        the treatment of Adrenal Insufficiency
+
+                    </h3>
+
+                    <p>
+
+                        UK Mathematical Biology Conference,
+                        University of Birmingham, UK.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="presentation">
+
+                <span>
+                    2025
+                </span>
+
+                <div>
+
+                    <h3>
+
+                        Mathematical Modelling for the
+                        treatment of Adrenal Insufficiency
+
+                    </h3>
+
+                    <p>
+
+                        Celebrating WOMEN in MATHEMATICAL BIOLOGY DAY,
+                        University of Oxford, UK.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     AWARDS
+========================================================= -->
+
+<section class="section soft-section"
+         id="awards">
+
+    <div class="container">
+
+
+        <div class="eyebrow">
+
+            Recognition
+
+        </div>
+
+
+        <h2 class="section-title">
+
+            Awards &amp; Scholarships
+
+        </h2>
+
+
+
+        <div class="award-list">
+
+
+            <div class="award">
+
+                <span>
+                    2024–Present
+                </span>
+
+                <div>
+
+                    <h3>
+                        EPSRC Doctoral Studentship
+                    </h3>
+
+                    <p>
+
+                        University of Birmingham, UK.
+                        Covers tuition fees and doctoral stipend.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="award">
+
+                <span>
+                    2017–2021
+                </span>
+
+                <div>
+
+                    <h3>
+
+                        Higher Education Commission (HEC)
+                        Merit-Based Scholarship
+
+                    </h3>
+
+                    <p>
+
+                        Pakistan.
+                        Awarded based on academic merit.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="award">
+
+                <span>
+                    2018
+                </span>
+
+                <div>
+
+                    <h3>
+
+                        Prime Minister’s Laptop Award
+
+                    </h3>
+
+                    <p>
+
+                        Pakistan.
+                        Awarded for academic excellence.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="award">
+
+                <span>
+                    2015–2017
+                </span>
+
+                <div>
+
+                    <h3>
+
+                        Merit-Based Full Tuition Fee Waiver
+
+                    </h3>
+
+                    <p>
+
+                        Awarded for academic performance
+                        at intermediate level.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     SERVICE
+========================================================= -->
+
+<section class="section"
+         id="service">
+
+    <div class="container">
+
+
+        <div class="eyebrow">
+
+            Academic Community
+
+        </div>
+
+
+        <h2 class="section-title">
+
+            Academic Service &amp; Outreach
+
+        </h2>
+
+
+
+        <div class="service-grid">
+
+
+            <article>
+
+                <span>
+                    2026
+                </span>
+
+                <h3>
+
+                    Co-organiser
+
+                </h3>
+
+                <p>
+
+                    Lunchtime Applied Mathematics Seminar (LAMS),
+                    School of Mathematics,
+                    University of Birmingham, UK.
+
+                </p>
+
+            </article>
+
+
+
+            <article>
+
+                <span>
+                    2025
+                </span>
+
+                <h3>
+
+                    PhD Student Panellist
+
+                </h3>
+
+                <p>
+
+                    PhD Pathways,
+                    University of Birmingham, UK.
+
+                    Speaker discussing PhD study,
+                    funding, research and academic
+                    career pathways.
+
+                </p>
+
+            </article>
+
+
+
+            <article>
+
+                <span>
+                    2025
+                </span>
+
+                <h3>
+
+                    Volunteer
+
+                </h3>
+
+                <p>
+
+                    PhDYourWay Event,
+                    University of Birmingham, UK.
+
+                    Supported student Q&amp;A
+                    on PhD study, applications
+                    and doctoral pathways.
+
+                </p>
+
+            </article>
+
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     CV / PROFILE
+========================================================= -->
+
+<section class="profile-section"
+         id="cv">
+
+    <div class="container">
+
+
+        <div class="profile-layout">
+
+
+            <div>
+
+                <span class="profile-label">
+
+                    Academic Profile
+
+                </span>
+
+
+                <h2>
+
+                    Ariba Shakeel
+
+                </h2>
+
+
+                <p>
+
+                    School of Mathematics
+
+                    <br>
+
+                    University of Birmingham
+
+                    <br>
+
+                    Birmingham, United Kingdom
+
+                </p>
+
+            </div>
+
+
+
+            <div class="profile-actions">
+
+
+                <!--
+                Upload your CV PDF to GitHub and
+                change the filename here if needed
+                -->
+
+                <a href="Ariba_CV_tex.pdf"
+                   target="_blank"
+                   class="profile-button primary-profile-button">
+
+                    <i class="fa-regular fa-file-pdf"></i>
+
+                    View CV
 
                 </a>
 
+
                 <a href="https://orcid.org/0009-0005-8796-5896"
                    target="_blank"
-                   class="button">
+                   class="profile-button">
 
                     ORCID
 
                 </a>
 
+
             </div>
 
+
         </div>
+
 
     </div>
 
 </section>
 
 
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
 <footer>
 
-    <div class="container footer-content">
+    <div class="container footer-layout">
 
         <span>
+
             © 2026 Ariba Shakeel
+
         </span>
 
         <span>
-            Applied Mathematics · University of Birmingham
+
+            Applied Mathematics ·
+            University of Birmingham
+
         </span>
 
     </div>
 
 </footer>
 
+
 </body>
+
 </html>
