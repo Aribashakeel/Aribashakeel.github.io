@@ -2,66 +2,53 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
 
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
 
     <meta name="description"
-          content="Ariba Shakeel is a PhD researcher in Applied Mathematics at the University of Birmingham. Her research focuses on mathematical biology, physiological modelling, multiple time-scale asymptotics and computational analysis.">
+          content="Ariba Shakeel is a PhD researcher in Applied Mathematics at the University of Birmingham, working in mathematical biology, mathematical modelling and applied differential equations.">
 
     <meta name="author"
           content="Ariba Shakeel">
 
-    <title>
-        Ariba Shakeel | Applied Mathematics
-    </title>
+    <title>Ariba Shakeel | Applied Mathematics</title>
 
-    <!-- Font Awesome -->
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-    <!-- Main CSS -->
     <link rel="stylesheet"
           href="style.css">
-
 </head>
 
 
-<body>
-
-
-<!-- =========================================================
-     NAVIGATION
-========================================================= -->
+<body class="home-page">
 
 <nav class="navbar">
 
     <div class="nav-container">
 
-        <a href="#home"
+        <a href="index.html"
            class="brand">
             Ariba Shakeel
         </a>
 
         <div class="nav-links">
 
-            <a href="#about">About</a>
+            <a href="research.html">Research</a>
 
-            <a href="#research">Research</a>
+            <a href="publications.html">Publications</a>
 
-            <a href="#approach">Approach</a>
+            <a href="teaching.html">Teaching</a>
 
-            <a href="#publications">Publications</a>
+            <a href="talks.html">Talks</a>
 
-            <a href="#teaching">Teaching</a>
+            <a href="awards.html">Awards</a>
 
-            <a href="#talks">Talks</a>
+            <a href="service.html">Service &amp; Outreach</a>
 
-            <a href="#service">Service</a>
-
-            <a href="#cv">CV</a>
+            <a href="#profile">CV</a>
 
         </div>
 
@@ -70,348 +57,172 @@
 </nav>
 
 
+<main class="home-hero">
 
-<!-- =========================================================
-     HERO
-========================================================= -->
+    <!-- General mathematics decoration -->
 
-<header class="hero"
-        id="home">
+    <div class="math-decoration math-left">
 
+        <span>∂u/∂t</span>
 
-    <div class="hero-stars"></div>
+        <span>ε ≪ 1</span>
 
-
-    <div class="hero-grid">
-
-
-        <!-- LEFT: MATHEMATICS -->
-
-        <div class="hero-science math-visual">
-
-            <div class="visual-label">
-                Multiple time scales
-            </div>
-
-            <div class="math-expression">
-
-                t<sub>0</sub> = t
-
-                <br>
-
-                t<sub>1</sub> = εt
-
-                <br>
-
-                t<sub>2</sub> = ε²t
-
-            </div>
-
-            <div class="small-equation">
-
-                0 &lt; ε ≪ 1
-
-            </div>
-
-
-            <svg class="multiscale-plot"
-                 viewBox="0 0 300 150"
-                 xmlns="http://www.w3.org/2000/svg">
-
-                <line x1="20"
-                      y1="120"
-                      x2="285"
-                      y2="120"
-                      stroke="#9eb4d1"
-                      stroke-width="1"/>
-
-                <line x1="20"
-                      y1="120"
-                      x2="20"
-                      y2="18"
-                      stroke="#9eb4d1"
-                      stroke-width="1"/>
-
-                <line x1="70"
-                      y1="25"
-                      x2="70"
-                      y2="122"
-                      stroke="#758fae"
-                      stroke-dasharray="5 6"/>
-
-                <line x1="145"
-                      y1="25"
-                      x2="145"
-                      y2="122"
-                      stroke="#758fae"
-                      stroke-dasharray="5 6"/>
-
-                <line x1="215"
-                      y1="25"
-                      x2="215"
-                      y2="122"
-                      stroke="#758fae"
-                      stroke-dasharray="5 6"/>
-
-                <path
-                    d="
-                    M22 112
-                    C40 45,55 25,78 44
-                    C105 66,112 99,145 102
-                    C177 106,190 92,218 97
-                    C247 102,265 104,282 102
-                    "
-                    fill="none"
-                    stroke="#ffffff"
-                    stroke-width="2"/>
-
-                <text x="28"
-                      y="140"
-                      class="svg-label">
-                    fast
-                </text>
-
-                <text x="112"
-                      y="140"
-                      class="svg-label">
-                    transition
-                </text>
-
-                <text x="225"
-                      y="140"
-                      class="svg-label">
-                    slow
-                </text>
-
-            </svg>
-
-        </div>
-
-
-
-        <!-- CENTRE -->
-
-        <div class="hero-main">
-
-            <div class="hero-kicker">
-
-                PhD Researcher in Applied Mathematics
-
-            </div>
-
-            <h1>
-                Ariba Shakeel
-            </h1>
-
-            <div class="gold-line"></div>
-
-            <p class="hero-text">
-
-                Mathematical modelling of physiological systems,
-                with a particular focus on cortisol dynamics,
-                hydrocortisone replacement therapy and
-                multiple time-scale processes.
-
-            </p>
-
-
-            <div class="profile-links">
-
-                <a href="#"
-                   target="_blank">
-                    <i class="fa-solid fa-graduation-cap"></i>
-                    Google Scholar
-                </a>
-
-                <a href="https://orcid.org/0009-0005-8796-5896"
-                   target="_blank">
-                    <i class="fa-brands fa-orcid"></i>
-                    ORCID
-                </a>
-
-                <a href="#"
-                   target="_blank">
-                    <i class="fa-brands fa-researchgate"></i>
-                    ResearchGate
-                </a>
-
-                <a href="#"
-                   target="_blank">
-                    <i class="fa-brands fa-linkedin"></i>
-                    LinkedIn
-                </a>
-
-            </div>
-
-
-            <div class="hero-buttons">
-
-                <a href="#research"
-                   class="button button-primary">
-                    Research
-                </a>
-
-                <a href="#publications"
-                   class="button">
-                    Publications
-                </a>
-
-                <a href="#cv"
-                   class="button">
-                    CV
-                </a>
-
-            </div>
-
-        </div>
-
-
-
-        <!-- RIGHT: PHYSIOLOGY -->
-
-        <div class="hero-science physiology-visual">
-
-            <div class="visual-label">
-                Physiological system
-            </div>
-
-
-            <div class="physiology-model">
-
-
-                <div class="model-top">
-
-                    <div class="model-node">
-                        Protein Bound
-                        <span>F<sub>b</sub></span>
-                    </div>
-
-                </div>
-
-
-                <div class="vertical-reversible">
-                    ⇅
-                </div>
-
-
-                <div class="model-middle">
-
-                    <div class="model-node small">
-                        Input
-                        <span>I(t)</span>
-                    </div>
-
-                    <div class="model-arrow">
-                        →
-                    </div>
-
-                    <div class="model-node central">
-                        Free Cortisol
-                        <span>F<sub>f</sub></span>
-                    </div>
-
-                    <div class="model-arrow">
-                        ⇄
-                    </div>
-
-                    <div class="model-node">
-                        Albumin Bound
-                        <span>F<sub>A</sub></span>
-                    </div>
-
-                </div>
-
-
-                <div class="vertical-reversible">
-                    ⇅
-                </div>
-
-
-                <div class="model-top">
-
-                    <div class="model-node">
-                        Peripheral
-                        <span>F<sub>p</sub></span>
-                    </div>
-
-                </div>
-
-
-                <div class="clearance">
-
-                    Free hormone
-                    <span>→</span>
-                    clearance
-
-                </div>
-
-            </div>
-
-
-            <div class="time-scale-strip">
-
-                <div class="time-scale-line"></div>
-
-                <div class="time-scale-labels">
-
-                    <span>
-                        Fast
-                    </span>
-
-                    <span>
-                        Intermediate
-                    </span>
-
-                    <span>
-                        Slow
-                    </span>
-
-                </div>
-
-            </div>
-
-        </div>
-
+        <span>∫ f(x) dx</span>
 
     </div>
 
-</header>
+
+    <div class="math-orbit orbit-one"></div>
+    <div class="math-orbit orbit-two"></div>
 
 
+    <div class="home-content">
 
-<!-- =========================================================
-     ABOUT
-========================================================= -->
+        <div class="home-kicker">
+            PhD Researcher in Applied Mathematics
+        </div>
 
-<section class="section"
-         id="about">
+        <h1>
+            Ariba Shakeel
+        </h1>
 
+        <div class="home-line"></div>
+
+        <p class="home-affiliation">
+
+            School of Mathematics
+            <br>
+
+            University of Birmingham, United Kingdom
+
+        </p>
+
+        <p class="home-description">
+
+            My research lies at the intersection of
+            applied mathematics, mathematical biology
+            and physiological modelling.
+
+        </p>
+
+
+        <div class="home-buttons">
+
+            <a href="research.html"
+               class="button primary-button">
+                Explore Research
+            </a>
+
+            <a href="publications.html"
+               class="button">
+                Publications
+            </a>
+
+        </div>
+
+
+        <div class="home-profile-links">
+
+            <a href="https://orcid.org/0009-0005-8796-5896"
+               target="_blank"
+               rel="noopener noreferrer">
+
+                <i class="fa-brands fa-orcid"></i>
+                ORCID
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="home-scroll">
+
+        Explore
+
+        <span>↓</span>
+
+    </div>
+
+</main>
+
+
+<section class="intro-strip">
 
     <div class="container">
 
+        <div class="intro-grid">
+
+            <div>
+
+                <span class="mini-label">
+                    Current
+                </span>
+
+                <strong>
+                    Mathematical Biology &amp;
+                    Physiological Modelling
+                </strong>
+
+            </div>
+
+            <div>
+
+                <span class="mini-label">
+                    Methods
+                </span>
+
+                <strong>
+                    Modelling · Asymptotics · Computation
+                </strong>
+
+            </div>
+
+            <div>
+
+                <span class="mini-label">
+                    Previous
+                </span>
+
+                <strong>
+                    Fluid Dynamics &amp; Boundary-Layer Theory
+                </strong>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="section home-about">
+
+    <div class="container">
 
         <div class="about-layout">
 
-
-            <div class="about-content">
+            <div>
 
                 <div class="eyebrow">
                     About
                 </div>
 
                 <h2>
-                    Applied mathematics at the interface
-                    of biology and physiology
+                    Applied mathematics across
+                    biological and physical systems
                 </h2>
 
                 <p>
 
                     I am a PhD researcher in Applied Mathematics
-                    at the University of Birmingham, working under
-                    the supervision of
+                    at the University of Birmingham, supervised by
 
                     <a href="https://www.birmingham.ac.uk/staff/profiles/maths/gallagher-meurig"
-                       target="_blank">
+                       target="_blank"
+                       rel="noopener noreferrer">
 
                         Dr Meurig Gallagher
 
@@ -420,7 +231,8 @@
                     and
 
                     <a href="https://www.birmingham.ac.uk/staff/profiles/metabolism-systems/smith-david"
-                       target="_blank">
+                       target="_blank"
+                       rel="noopener noreferrer">
 
                         Professor David J. Smith
 
@@ -428,18 +240,24 @@
 
                 </p>
 
-
                 <p>
 
-                    My research combines mathematical modelling,
-                    analytical methods and scientific computation
-                    to understand the mechanisms governing
-                    physiological systems.
+                    My current research develops mathematical
+                    modelling approaches for understanding
+                    cortisol replacement therapy in adrenal
+                    insufficiency.
 
                 </p>
 
-            </div>
+                <a href="research.html"
+                   class="editorial-link">
 
+                    Read about my research
+                    <span>→</span>
+
+                </a>
+
+            </div>
 
 
             <div class="portrait-wrapper">
@@ -450,774 +268,65 @@
 
             </div>
 
-
         </div>
-
 
     </div>
 
 </section>
 
 
-
-<!-- =========================================================
-     CURRENT RESEARCH
-========================================================= -->
-
-<section class="section research-section"
-         id="research">
-
+<section class="profile-section"
+         id="profile">
 
     <div class="container">
-
-
-        <div class="research-layout">
-
-
-            <div class="research-number">
-                01
-            </div>
-
-
-            <div class="research-content">
-
-                <div class="eyebrow">
-                    Current Research
-                </div>
-
-                <h2>
-
-                    Mathematical Modelling to Understand
-                    the Treatment of Adrenal Insufficiency
-
-                </h2>
-
-
-                <p>
-
-                    My PhD research develops mechanistic mathematical
-                    models of cortisol replacement therapy in adrenal
-                    insufficiency.
-
-                    The models incorporate physiological mechanisms
-                    including cortisol–protein binding,
-                    cortisol–cortisone interconversion,
-                    tissue distribution and cortisol excretion.
-
-                </p>
-
-
-                <p>
-
-                    The broader aim is to understand how treatment
-                    strategies interact with physiological mechanisms
-                    and how mathematical modelling can help explain
-                    cortisol dynamics and inter-patient variability.
-
-                </p>
-
-
-                <div class="research-tags">
-
-                    <span>Mathematical Biology</span>
-
-                    <span>Physiological Modelling</span>
-
-                    <span>ODE Models</span>
-
-                    <span>Cortisol Dynamics</span>
-
-                </div>
-
-
-            </div>
-
-
-        </div>
-
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================================================
-     RESEARCH APPROACH
-========================================================= -->
-
-<section class="section approach-section"
-         id="approach">
-
-
-    <div class="container">
-
-
-        <div class="eyebrow">
-            Research Approach
-        </div>
-
-        <h2 class="section-heading">
-            How I approach mathematical problems
-        </h2>
-
-
-        <div class="approach-path">
-
-
-            <!-- 01 -->
-
-            <div class="approach-step">
-
-                <div class="step-number">
-                    01
-                </div>
-
-                <div class="step-symbol">
-                    ∑
-                </div>
-
-                <h3>
-                    Mathematical Modelling
-                </h3>
-
-                <p>
-                    Mechanistic ODE models
-                </p>
-
-                <p>
-                    Physiological mechanisms
-                </p>
-
-            </div>
-
-
-
-            <div class="path-arrow">
-                →
-            </div>
-
-
-
-            <!-- 02 -->
-
-            <div class="approach-step">
-
-                <div class="step-number">
-                    02
-                </div>
-
-                <div class="step-symbol">
-                    ε
-                </div>
-
-                <h3>
-                    Asymptotic Analysis
-                </h3>
-
-                <p>
-                    Multiple time scales
-                </p>
-
-                <p>
-                    Perturbation methods
-                </p>
-
-            </div>
-
-
-
-            <div class="path-arrow">
-                →
-            </div>
-
-
-
-            <!-- 03 -->
-
-            <div class="approach-step">
-
-                <div class="step-number">
-                    03
-                </div>
-
-                <div class="step-symbol">
-                    ∂
-                </div>
-
-                <h3>
-                    Computational Analysis
-                </h3>
-
-                <p>
-                    Simulation &amp; estimation
-                </p>
-
-                <p>
-                    Identifiability &amp; optimisation
-                </p>
-
-            </div>
-
-
-        </div>
-
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================================================
-     PREVIOUS RESEARCH
-========================================================= -->
-
-<section class="section previous-section">
-
-
-    <div class="container">
-
-
-        <div class="research-layout">
-
-
-            <div class="research-number muted">
-                02
-            </div>
-
-
-            <div class="research-content">
-
-
-                <div class="eyebrow">
-                    Previous Research
-                </div>
-
-
-                <h2>
-                    Fluid Dynamics &amp;
-                    Boundary-Layer Flows
-                </h2>
-
-
-                <p>
-
-                    My earlier research focused on fluid dynamics,
-                    including rotating flows, boundary-layer theory
-                    and models incorporating variable fluid properties.
-
-                </p>
-
-
-                <p>
-
-                    My MSc dissertation investigated rotating flows
-                    over a stationary plane surface, followed by
-                    research on MHD boundary-layer flow and numerical
-                    modelling using MATLAB.
-
-                </p>
-
-
-                <div class="research-tags">
-
-                    <span>Fluid Dynamics</span>
-
-                    <span>Boundary Layers</span>
-
-                    <span>Rotating Flow</span>
-
-                    <span>Computational Fluid Mechanics</span>
-
-                </div>
-
-
-                <div class="future-link">
-
-                    MSc thesis link can be added here later.
-
-                </div>
-
-
-            </div>
-
-
-        </div>
-
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================================================
-     PUBLICATIONS
-========================================================= -->
-
-<section class="section"
-         id="publications">
-
-
-    <div class="container">
-
-
-        <div class="eyebrow">
-            Publications
-        </div>
-
-        <h2 class="section-heading">
-            Journal Publications
-        </h2>
-
-
-
-        <!-- 2025 -->
-
-        <article class="publication">
-
-
-            <div class="publication-year">
-                2025
-            </div>
-
-
-            <div class="publication-body">
-
-                <h3>
-
-                    Exploration of variable fluid properties
-                    in a pressure gradient driven generalized
-                    vortex flow dynamics using numerical approach
-
-                </h3>
-
-
-                <p class="publication-authors">
-
-                    <strong>Ariba Shakeel</strong>,
-                    Meraj Mustafa and Kohilavani Naganthran
-
-                </p>
-
-
-                <p class="publication-journal">
-
-                    <em>Modern Physics Letters B</em>,
-                    Article 2550136
-
-                </p>
-
-
-                <a href="https://doi.org/10.1142/S0217984925501362"
-                   target="_blank"
-                   class="text-link">
-
-                    DOI
-                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
-
-                </a>
-
-            </div>
-
-
-        </article>
-
-
-
-        <!-- 2023 -->
-
-        <article class="publication">
-
-
-            <div class="publication-year">
-                2023
-            </div>
-
-
-            <div class="publication-body">
-
-                <h3>
-
-                    Assessment of Bödewadt flow over a stretchable
-                    porous surface with variable physical properties:
-                    A comparative study
-
-                </h3>
-
-
-                <p class="publication-authors">
-
-                    <strong>Ariba Shakeel</strong>
-                    and M. Mustafa
-
-                </p>
-
-
-                <p class="publication-journal">
-
-                    <em>Numerical Heat Transfer,
-                    Part B: Fundamentals</em>,
-                    pp. 1–14
-
-                </p>
-
-
-                <a href="https://doi.org/10.1080/10407790.2023.2274452"
-                   target="_blank"
-                   class="text-link">
-
-                    DOI
-                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
-
-                </a>
-
-            </div>
-
-
-        </article>
-
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================================================
-     TEACHING
-========================================================= -->
-
-<section class="section soft-section"
-         id="teaching">
-
-
-    <div class="container">
-
-
-        <div class="eyebrow">
-            Teaching
-        </div>
-
-
-        <h2 class="section-heading">
-            Mathematics Teaching
-        </h2>
-
-
-        <div class="simple-grid">
-
-
-            <div>
-
-                <h3>
-                    Postgraduate Teaching Assistant
-                </h3>
-
-                <p class="meta">
-                    University of Birmingham
-                    · 2024–Present
-                </p>
-
-            </div>
-
-
-            <div class="detail-list">
-
-                <p>
-                    Undergraduate and postgraduate
-                    mathematics demonstrating
-                </p>
-
-                <p>
-                    Assignment and examination marking
-                </p>
-
-                <p>
-                    MATLAB and LaTeX computer-based sessions
-                </p>
-
-                <p>
-                    Examination invigilation
-                </p>
-
-            </div>
-
-
-        </div>
-
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================================================
-     TALKS
-========================================================= -->
-
-<section class="section"
-         id="talks">
-
-
-    <div class="container">
-
-
-        <div class="eyebrow">
-            Selected Talks
-        </div>
-
-
-        <h2 class="section-heading">
-            Presentations &amp; Conferences
-        </h2>
-
-
-        <div class="timeline">
-
-
-            <div class="timeline-item">
-
-                <span class="timeline-year">
-                    2026
-                </span>
-
-                <div>
-
-                    <strong>
-                        Mathematical Modelling to Understand
-                        the Treatment of Adrenal Insufficiency
-                    </strong>
-
-                    <p>
-                        Applied Mathematics Postgraduate Conference,
-                        University of Warwick
-                    </p>
-
-                </div>
-
-            </div>
-
-
-
-            <div class="timeline-item">
-
-                <span class="timeline-year">
-                    2026
-                </span>
-
-                <div>
-
-                    <strong>
-                        Mathematical Modelling to Understand the
-                        Treatment of Adrenal Insufficiency:
-                        Exploring Continuous Intravenous Infusion
-                    </strong>
-
-                    <p>
-                        Lunchtime Applied Mathematics Seminar,
-                        University of Birmingham
-                    </p>
-
-                </div>
-
-            </div>
-
-
-
-            <div class="timeline-item">
-
-                <span class="timeline-year">
-                    2025
-                </span>
-
-                <div>
-
-                    <strong>
-                        Numerical and Asymptotic Analysis
-                        of Cortisol-Protein Binding Models
-                    </strong>
-
-                    <p>
-                        Mathematical and Computational Biology /
-                        Applied Mathematics seminars
-                    </p>
-
-                </div>
-
-            </div>
-
-
-        </div>
-
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================================================
-     SERVICE
-========================================================= -->
-
-<section class="section soft-section"
-         id="service">
-
-
-    <div class="container">
-
-
-        <div class="eyebrow">
-            Academic Service &amp; Outreach
-        </div>
-
-
-        <h2 class="section-heading">
-            Academic Community
-        </h2>
-
-
-        <div class="service-grid">
-
-
-            <div class="service-item">
-
-                <span class="service-year">
-                    2026
-                </span>
-
-                <h3>
-                    Co-organiser
-                </h3>
-
-                <p>
-                    Lunchtime Applied Mathematics Seminar
-                    (LAMS), University of Birmingham
-                </p>
-
-            </div>
-
-
-
-            <div class="service-item">
-
-                <span class="service-year">
-                    2025
-                </span>
-
-                <h3>
-                    PhD Student Panellist
-                </h3>
-
-                <p>
-                    PhD Pathways,
-                    University of Birmingham
-                </p>
-
-            </div>
-
-
-
-            <div class="service-item">
-
-                <span class="service-year">
-                    2025
-                </span>
-
-                <h3>
-                    Volunteer
-                </h3>
-
-                <p>
-                    PhDYourWay,
-                    student Q&amp;A and doctoral guidance
-                </p>
-
-            </div>
-
-
-        </div>
-
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================================================
-     CV / PROFILE
-========================================================= -->
-
-<section class="section profile-section"
-         id="cv">
-
-
-    <div class="container">
-
 
         <div class="profile-box">
 
-
             <div>
 
-                <div class="eyebrow light">
-                    Academic Profile
-                </div>
+                <span class="profile-small">
+                    Academic profile
+                </span>
 
                 <h2>
                     Ariba Shakeel
                 </h2>
 
                 <p>
-
                     School of Mathematics
                     <br>
-
                     University of Birmingham
-                    <br>
-
-                    Birmingham, United Kingdom
-
                 </p>
 
             </div>
 
+            <div class="profile-buttons">
 
-            <div class="profile-actions">
+                <!-- Connect your CV here after uploading it -->
 
                 <a href="#"
-                   class="button button-primary">
+                   class="button primary-button">
 
                     Download CV
 
                 </a>
 
-                <a href="#home"
+                <a href="https://orcid.org/0009-0005-8796-5896"
+                   target="_blank"
                    class="button">
 
-                    Back to top
+                    ORCID
 
                 </a>
 
             </div>
 
-
         </div>
-
 
     </div>
 
 </section>
 
-
-
-<!-- =========================================================
-     FOOTER
-========================================================= -->
 
 <footer>
 
@@ -1235,7 +344,5 @@
 
 </footer>
 
-
 </body>
-
 </html>
